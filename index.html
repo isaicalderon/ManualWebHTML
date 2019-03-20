@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <title>Starter Template · Bootstrap</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+        <!-- Bootstrap core CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="code.css">
+        <style>
+            *{
+                text-align: justify;
+            }
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .center{
+                text-align: center;
+            }
+            .border-1{
+                /*border: 1px solid #ccc;*/
+            }
+            .h6{
+                line-height: 1.6;
+            }
+            .ol1{
+                font-size: 17pt;
+                list-style: upper-roman;
+            }
+            .ol2{
+                font-size: 15pt;
+                list-style: lower-alpha;
+            }
+            .no-server{
+                color: #5b9bd5;
+                font-style: italic;
+                text-decoration: underline;
+            }
+            .blue{
+                color: #5b9bd5;
+            }
+
+            .tab{
+                margin-left: 2.5em;
+            }
+            .img-fluid{
+                margin-bottom: 5px;
+            }
+            li{
+                margin-bottom: 20px;
+            }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+
+        <!-- Custom styles for this template -->
+        <link href="starter-template.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Manual Aplicaciones Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" 
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="#"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+                     -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                     -->
+                </ul>
+
+                <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                 -->
+            </div>
+        </nav>
+
+        <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
+            <ol class="ol1">
+                <li><h4>Requerimientos para poder trabajar.</h4>
+                    <ol class="ol2">
+                        <li>
+                            <p>Eclipse.</p>
+                            <p class="h6">
+                                Para la facilidad de trabajo e instalación del servidor en donde vamos a montar nuestra aplicación web, utilizamos eclipse, se puede descargar del siguiente link: https://www.eclipse.org/downloads/
+                                Descargamos la última versión  o la versión PHOTON.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img1.jpg" class="img-fluid rounded border-1" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">Descargamos el instalador.</p>
+                            <div class="text-center">
+                                <img src="img/img2.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">Descargamos, instalamos y eleccionamos Java EE.</p>
+                            <div class="text-center">
+                                <img src="img/img3.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">Al finalizar y ejecutar eclipse, comenzará a cargar y saldrá algo así.</p>
+                            <div class="text-center">
+                                <img src="img/img6.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Antes de continuar, nos pedirá que seleccionemos un lugar de trabajo, esto no quiere decir que sea solamente ese lugar de trabajo, ya que eclipse antes de abrir te da la opción de elegir cuál lugar de trabajo quieres manejar, y cada lugar de trabajo puede tener uno o más proyectos. En este caso utilizaremos el default, si este no existe, eclipse lo crea y empiezas a trabajar sobre él.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img7.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Esta sería la ventana final después de todo este paso.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img8.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Herramientas de Eclipse</h4>
+                    <ol class="ol2">
+                        <li>
+                            <p class="h6">
+                                Para poder descargar el servidor de Wildfly que necesitamos, primero tendremos que descargar la  herramienta: <br/> JBoss Tools. Entramos Eclipse → Window → Preferences
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img9.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Abrimos la opción Server → Runtime Enviroments, das clic en add. Aparecerá un nuevo diálogo, expandimos la carpeta Red Hat JBoss Middleware, click en JBoss AS, WildFly, & EAP Server Tools, click en Next o siguiente.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img10.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Aceptas las licencias y esperas a que termine de descargar todos los programas, al final esperas hasta que aparezca un diálogo que te pida reiniciar eclipse mientras eso no pase significa que aún sigue descargando archivos.
+                            </p>
+                        </li>
+
+                    </ol>
+                </li>
+                <li>
+                    <h4>Wildfly v10.x</h4>
+                    <ol class="ol2">
+                        <li>
+                            <p class="h6">
+                                Ya teniendo JBoss Tools instalado, procederemos a instalar un servidor de Wildfly, en este caso utilizamos la versión 10.x final.
+                                Seleccionamos la pestaña de Servers, si no se encuentra en la view de Eclipse podemos buscarla en
+                                Window → Show View → Servers.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img11.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Seleccionamos la opción <span class="no-server">“No servers are available. Click this link to create a new server.”</span>   y seleccionamos el servidor Wildfly 10.x.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img12.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <br/>
+                            <div class="text-center">
+                                <img src="img/img13.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Ya que aún no tenemos un runtime para el servidor, tendremos que descargarlo. Seleccionamos <span class="no-server">“Download and install runtime…”</span> 
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img14.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <br/>
+                            <div class="text-center">
+                                <img src="img/img15.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <br/>
+                            <div class="text-center">
+                                <img src="img/img16.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Finalizamos y saldrá algo así.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img17.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Ahora tenemos que configurar nuestro Wildfly para las aplicaciones web.
+                                Vamos a la carpeta en donde se instaló y buscamos la carpeta bin.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img18.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Entramos y pegamos los siguientes archivos que están en la carpeta “Conexión a base de datos”:
+                                <br/><span class="no-server">admintx_csa.properties</span>, <span class="no-server">log4j_csa.properties</span> y <span class="no-server"> log4j.properties</span>
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img19.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Ahora tendremos que copiar la carpeta modules de la carpeta “Conexión a base de datos” y pegarla en la raíz de wildfly, para verificar que se metieron los archivos hay que llegar hasta esta ruta: modules/system/layers/base/com/oracle/main y encontrar los siguientes archivos: module.xml y ojdbc7.jar.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img20.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Tenemos que configurar la conexión de Wildfly a la base de datos, para eso buscaremos en la carpeta raíz de wildfly-10.1.0.Final/standalone/configuration/standalone.xml aquí tenemos que reemplazar por el que viene en “Conexión a base de datos”. Este contiene un pool para la conexión, el cual se verá reflejado en los siguientes pasos.
+                                <br/><br/>Ahora tendremos que configurar el puerto con el que vamos a entrar a la aplicación web, esto se hace debido a que el puerto que utiliza el XE de Oracle SQL Developer puede causar conflicto con el 8080 y no podremos entrar a la aplicación. Esto se hace en la siguiente imagen.
+
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img21.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Hecho esto, guardamos con ctrl+s y daremos click derecho al servidor, le damos Start y empezará a levantar el servidor en localhost. <br/><br/>
+                                Para poder ingresar a localhost:9990 que es la dirección de administración de Wildfly, se necesita crear un usuario, para esto vamos a la carpeta de Wildfly y buscamos el siguiente archivo: 
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img22.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Damos doble click y aparecerá una ventana de CMD así:
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img23.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Seleccionamos la opción a, damos enter y nos va a preguntar el nombre de usuario, podemos poner cualquiera y volvemos a dar enter. Nos pedirá una contraseña, la contraseña puede ser cualquiera, pero para fácil acceso utilizamos 1234, nos dará un aviso de que debe de ser de 8 caracteres, pero podemos seguir poniendo yes en la consola, nos preguntará en qué grupo queremos añadir al usuario, solamente presionamos enter y seguimos, le damos yes de nuevo y añadirá al usuario en el grupo antes dicho, en la última ponemos no y terminamos.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img24.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Reiniciamos el servidor. Ahora toca hacer un test de conexión con la base datos. Para esto iremos a nuestro navegador e iremos a la siguiente dirección: localhost:9990, nos pedirá el usuario y contraseña para entrar.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img25.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Seleccionamos la pestaña “Runtime”. Y vamos a donde sale la imagen y seleccionamos”View”.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img26.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Seleccionamos poolCSA y damos a “Test Connection”.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img27.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                El servidor ya quedó listo con la conexión para la base de datos.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img28.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        
+                    </ol>
+                </li>
+                <li>
+                    <h4>Oracle.</h4>
+                    <ol class="ol2">
+                        <li>
+                            <p class="h6">
+                                Para trabajar con la base de datos, Oracle SQL Developer, se puede utilizar otro manejador de base de datos.
+                                <br/><br/>El instalador se encuentra en la carpeta Oracle SQL Developer dentro del manual. Primero debemos instalar el que viene en la carpeta OracleXE/DISK1.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img29.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Hecho esto, debemos de ubicarnos en la carpeta sqldeveloper-4.1.0.19.07-no-jre, abrimos sqldeveloper-4.1.0.19.07-no-jre\sqldeveloper\sqldeveloper.exe
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img30.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p class="h6">
+                                Primero tenemos que configurar una conexión a una base de datos, en nuestro caso utilizaremos la siguiente configuración:
+                                <br/>Nombre del host: ec2-13-58-25-192.us-east-2.compute.amazonaws.com
+                                <br/>Usuario: CAPACITACION
+                                <br/>Contraseña: CAPACITACION#05032019
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img31-2.jpg" class="img-fluid rounded" alt="...">
+                            </div> 
+                            <p class="h6">
+                                Damos en probar conexión y en Estado: debe de decir “Correcto”. Por ultimo le das en Guardar y Conectar.
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h4>Acceso a datos</h4>
+                    <ol class="ol2">
+                        <li>
+                            <p>Entidades</p>
+                            <p class="h6">
+                                Una entidad es la representación de una tabla en la base de datos. Cada instancia de esta, es una fila que se puede consultar, eliminar, modificar y agregar. Debido a que las entidades son objetos, estos pueden tener otros objetos dentro de ellas. Ejemplo: <br/>
+                                <code>
+                                    public class Auto{ <br/>
+                                        <span class="tab">private Integer identificador;</span><br/>
+                                        <span class="tab">private Marca idMarca;</span> <br/>
+                                        <span class="tab">private Modelo idModelo;</span> <br/>
+                                    }
+                                </code><br/>
+                                Se pueden ver los objetos, estos objetos representan toda la información de una entidad creada anteriormente, esta entidad contiene datos correspondientes a su tabla. Para simplificar, una entidad contiene los datos de su tabla, pero si un campo hace referencia a otra tabla que ya tiene una entidad, y en un futuro se puede ocupar un campo aparte de su identificador, se utiliza la entidad de esta misma, ya que aquí podremos guardar datos de la tabla y datos de su tabla relacionada.
+                                <br/><br/>
+                                Ejemplo de consulta:
+                                <code>
+                                    <span class="blue">SELECT</span> AU.*, MA.DESCRIPCIONMARCA, MO.DESCRIPCIONMODELO <span class="blue">FROM</span> AUTO AU <span class="blue">LEFT JOIN</span> MARCA MA ON AU.IDMARCA = MA.IDMARCA <span class="blue">LEFT JOIN</span> MODELO MO ON AU.IDMODELO = MO.MODELO AND AU.MARCA = MO.MARCA;
+                                </code><br/><br/>
+                                En esta consulta, se manda a pedir la descripción de la marca y el modelo en donde el id de cada uno en el automóvil sea igual en cada una de sus tablas, en el caso de modelo se tiene que tomar en cuenta la marca también porque los modelos vienen de una marca de automóviles. 
+                                <br/><br/>La tabla sobre la que vamos a trabajar será la siguiente: ALUMNOS
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img32.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Para las entidades, se crea un proyecto el cual las contiene todas. <br/>
+                                Iremos a File → New → Other → Java Project.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img33.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <div class="text-center">
+                                <img src="img/img34.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">Creamos los siguientes paquetes dentro de source: com.matco.manual.entity</p>
+                            <div class="text-center">
+                                <img src="img/img35.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Hecho esto, tendremos que crear una clase la cual será la entidad, a esta le pondremos “Alumno”.
+                                <br/>El código terminará así:
+                            </p>
+                            <p class="h6" style="border-left: 2px solid #eaeaea;">
+                                <code class="code-build">
+                                    <span class="pr">package</span> com.matco.manual.entity; <br/> <br/>
+                                    <span class="pr">import</span> java.io.Serializable; <br/>
+                                    <span class="pr">import</span> java.util.Date; <br/><br/>
+                                    <span class="pr">public</span> <span class="pr">class</span> Alumno{ <br/>
+                                        <span class="tab"><span class="pr">private</span> String <span class="var">nombre</span>;</span><br/>
+                                        <span class="tab"><span class="pr">private</span> String <span class="var">apellidoPaterno</span>;</span><br/>
+                                    }
+                                </code>
+                            
+                            </p>
+                        </li>   
+                    </ol>
+                </li>
+            </ol>
+            
+
+
+            
+        </main><!-- /.container -->
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    </body>
+</html>

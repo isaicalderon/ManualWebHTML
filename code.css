@@ -1,0 +1,16 @@
+.code-build{
+	color: black;
+	font-size: 87.5%;
+    word-break: break-word;
+}
+.pr{
+	color: #e83e8c;
+	font-weight: bold;
+}
+.var{
+	color: mediumblue/*#219*/;
+}
+
+.tab{
+	margin-left: 2.5em;
+}
