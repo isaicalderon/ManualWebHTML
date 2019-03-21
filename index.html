@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Jekyll v3.8.5">
-        <title>Starter Template · Bootstrap</title>
+        <title>Manual de Aplicaciones WEB</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
         <!-- Bootstrap core CSS -->
@@ -384,11 +384,59 @@
                                     <span class="blue">SELECT</span> AU.*, MA.DESCRIPCIONMARCA, MO.DESCRIPCIONMODELO <span class="blue">FROM</span> AUTO AU <span class="blue">LEFT JOIN</span> MARCA MA ON AU.IDMARCA = MA.IDMARCA <span class="blue">LEFT JOIN</span> MODELO MO ON AU.IDMODELO = MO.MODELO AND AU.MARCA = MO.MARCA;
                                 </code><br/><br/>
                                 En esta consulta, se manda a pedir la descripción de la marca y el modelo en donde el id de cada uno en el automóvil sea igual en cada una de sus tablas, en el caso de modelo se tiene que tomar en cuenta la marca también porque los modelos vienen de una marca de automóviles. 
-                                <br/><br/>La tabla sobre la que vamos a trabajar será la siguiente: ALUMNOS
+                                <br/><br/>La tabla sobre la que vamos a trabajar será la siguiente: ALUMNOS <br/><br/>
+                                Query: 
+                                <code class="code-build">
+                                    <span class="pr">CREATE TABLE</span> ALUMNOS()
+
+                                </code>
                             </p>
                             <div class="text-center">
                                 <img src="img/img32.jpg" class="img-fluid rounded" alt="...">
                             </div>
+                            <p class="h6">
+                                Cremos un nuevo package (EN CASO DE QUE YA EXISTA PUEDES OMITIR ESTOS PASOS DANDO CLIC <a href="#omitir">AQUI</a>) y lo nombramos CAPACITACION
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img36.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Cuando sea creado, aparecera una nueva pestaña en el diseño, y damos clic al boton de guardar
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img37.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">Una vez guarado, aparecera así. Recuerda que tu package debe tener por nombre "CAPACITACION"</p>
+                            <div class="text-center">
+                                <img src="img/img38.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">Seleccionamos el package CAPACITACION clic derecho, clic a "Crear cuerpo" y clic en salvar todo</p>
+                            <div class="text-center">
+                                <img src="img/img39.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Entramos a la carpeta del tutoria, luego en la carpeta SQL, entras al archivo body.sql copias y remplazas todo en CAPACITACION Body de SQLDeveloper
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img40.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Al copiarlo quedara así
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img41.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6">
+                                Luego entramos al nivel de CAPACITACION y copiamos del archivo capacitacion.sql a CAPACITACION de SQLDeveloper
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img42.jpg" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p id="omitir"></p>
+
+
+
+                            <br/>
                             <p class="h6">
                                 Para las entidades, se crea un proyecto el cual las contiene todas. <br/>
                                 Iremos a File → New → Other → Java Project.
@@ -407,7 +455,7 @@
                                 Hecho esto, tendremos que crear una clase la cual será la entidad, a esta le pondremos “Alumno”.
                                 <br/>El código terminará así:
                             </p>
-                            <p class="h6" style="border-left: 2px solid #eaeaea;">
+                            <p class="h6" style="border-left: 2px dotted #eaeaea; padding: 0% 1%;">
                                 <code class="code-build">
                                     <span class="pr">package</span> com.matco.manual.entity; <br/> <br/>
                                     <span class="pr">import</span> java.io.Serializable; <br/>
@@ -417,7 +465,7 @@
                                         <span class="tab"><span class="pr">private</span> String <span class="var">apellidoPaterno</span>;</span><br/>
                                     }
                                 </code>
-                            
+                                
                             </p>
                         </li>   
                     </ol>
