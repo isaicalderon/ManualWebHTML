@@ -16,63 +16,13 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="stylesheet" type="text/css" href="code.css">
-        <style>
-            *{
-                text-align: justify;
-            }
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-            .center{
-                text-align: center;
-            }
-            .border-1{
-                /*border: 1px solid #ccc;*/
-            }
-            .h6{
-                line-height: 1.6;
-            }
-            .ol1{
-                font-size: 17pt;
-                list-style: upper-roman;
-            }
-            .ol2{
-                font-size: 15pt;
-                list-style: lower-alpha;
-            }
-            .no-server{
-                color: #5b9bd5;
-                font-style: italic;
-                text-decoration: underline;
-            }
-            .blue{
-                color: #5b9bd5;
-            }
-
-            .tab{
-                margin-left: 2.5em;
-            }
-            .img-fluid{
-                margin-bottom: 5px;
-            }
-            li{
-                margin-bottom: 20px;
-            }
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
-        </style>
-
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
         <!-- Custom styles for this template -->
-        <link href="starter-template.css" rel="stylesheet">
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -113,69 +63,56 @@
                     <ol class="ol2">
                         <li>
                             <p>Eclipse.</p>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Para la facilidad de trabajo e instalación del servidor en donde vamos a montar nuestra aplicación web, utilizamos eclipse, se puede descargar del siguiente link: https://www.eclipse.org/downloads/
                                 Descargamos la última versión  o la versión PHOTON.
                             </p>
                             <div class="text-center">
                                 <img src="img/img1.jpg" class="img-fluid rounded border-1" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">Descargamos el instalador.</p>
+                            <p class="h6 p_sec">Descargamos el instalador.</p>
                             <div class="text-center">
                                 <img src="img/img2.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">Descargamos, instalamos y eleccionamos Java EE.</p>
+                        
+                            <p class="h6 p_sec">Descargamos, instalamos y eleccionamos Java EE.</p>
                             <div class="text-center">
                                 <img src="img/img3.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">Al finalizar y ejecutar eclipse, comenzará a cargar y saldrá algo así.</p>
+                            <p class="h6 p_sec">Al finalizar y ejecutar eclipse, comenzará a cargar y saldrá algo así.</p>
                             <div class="text-center">
                                 <img src="img/img6.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">
+                        
+                            <p class="h6 p_sec">
                                 Antes de continuar, nos pedirá que seleccionemos un lugar de trabajo, esto no quiere decir que sea solamente ese lugar de trabajo, ya que eclipse antes de abrir te da la opción de elegir cuál lugar de trabajo quieres manejar, y cada lugar de trabajo puede tener uno o más proyectos. En este caso utilizaremos el default, si este no existe, eclipse lo crea y empiezas a trabajar sobre él.
                             </p>
                             <div class="text-center">
                                 <img src="img/img7.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">
+                        
+                            <p class="h6 p_sec">
                                 Esta sería la ventana final después de todo este paso.
                             </p>
                             <div class="text-center">
                                 <img src="img/img8.jpg" class="img-fluid rounded" alt="...">
                             </div>
                         </li>
-                    </ol>
-                </li>
-                <li>
-                    <h4>Herramientas de Eclipse</h4>
-                    <ol class="ol2">
                         <li>
-                            <p class="h6">
+                            <p>Herramientas de Eclipse</p>
+                            <p class="h6 p_sec">
                                 Para poder descargar el servidor de Wildfly que necesitamos, primero tendremos que descargar la  herramienta: <br/> JBoss Tools. Entramos Eclipse → Window → Preferences
                             </p>
                             <div class="text-center">
                                 <img src="img/img9.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                        </li>
-                        <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Abrimos la opción Server → Runtime Enviroments, das clic en add. Aparecerá un nuevo diálogo, expandimos la carpeta Red Hat JBoss Middleware, click en JBoss AS, WildFly, & EAP Server Tools, click en Next o siguiente.
                             </p>
                             <div class="text-center">
                                 <img src="img/img10.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Aceptas las licencias y esperas a que termine de descargar todos los programas, al final esperas hasta que aparezca un diálogo que te pida reiniciar eclipse mientras eso no pase significa que aún sigue descargando archivos.
                             </p>
                         </li>
@@ -184,9 +121,9 @@
                 </li>
                 <li>
                     <h4>Wildfly v10.x</h4>
-                    <ol class="ol2">
+                    <ol class="ol2" style="list-style: none;">
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Ya teniendo JBoss Tools instalado, procederemos a instalar un servidor de Wildfly, en este caso utilizamos la versión 10.x final.
                                 Seleccionamos la pestaña de Servers, si no se encuentra en la view de Eclipse podemos buscarla en
                                 Window → Show View → Servers.
@@ -196,7 +133,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Seleccionamos la opción <span class="no-server">“No servers are available. Click this link to create a new server.”</span>   y seleccionamos el servidor Wildfly 10.x.
                             </p>
                             <div class="text-center">
@@ -208,7 +145,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Ya que aún no tenemos un runtime para el servidor, tendremos que descargarlo. Seleccionamos <span class="no-server">“Download and install runtime…”</span> 
                             </p>
                             <div class="text-center">
@@ -224,7 +161,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Finalizamos y saldrá algo así.
                             </p>
                             <div class="text-center">
@@ -232,7 +169,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Ahora tenemos que configurar nuestro Wildfly para las aplicaciones web.
                                 Vamos a la carpeta en donde se instaló y buscamos la carpeta bin.
                             </p>
@@ -241,7 +178,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Entramos y pegamos los siguientes archivos que están en la carpeta “Conexión a base de datos”:
                                 <br/><span class="no-server">admintx_csa.properties</span>, <span class="no-server">log4j_csa.properties</span> y <span class="no-server"> log4j.properties</span>
                             </p>
@@ -250,7 +187,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Ahora tendremos que copiar la carpeta modules de la carpeta “Conexión a base de datos” y pegarla en la raíz de wildfly, para verificar que se metieron los archivos hay que llegar hasta esta ruta: modules/system/layers/base/com/oracle/main y encontrar los siguientes archivos: module.xml y ojdbc7.jar.
                             </p>
                             <div class="text-center">
@@ -258,7 +195,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Tenemos que configurar la conexión de Wildfly a la base de datos, para eso buscaremos en la carpeta raíz de wildfly-10.1.0.Final/standalone/configuration/standalone.xml aquí tenemos que reemplazar por el que viene en “Conexión a base de datos”. Este contiene un pool para la conexión, el cual se verá reflejado en los siguientes pasos.
                                 <br/><br/>Ahora tendremos que configurar el puerto con el que vamos a entrar a la aplicación web, esto se hace debido a que el puerto que utiliza el XE de Oracle SQL Developer puede causar conflicto con el 8080 y no podremos entrar a la aplicación. Esto se hace en la siguiente imagen.
 
@@ -268,7 +205,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Hecho esto, guardamos con ctrl+s y daremos click derecho al servidor, le damos Start y empezará a levantar el servidor en localhost. <br/><br/>
                                 Para poder ingresar a localhost:9990 que es la dirección de administración de Wildfly, se necesita crear un usuario, para esto vamos a la carpeta de Wildfly y buscamos el siguiente archivo: 
                             </p>
@@ -277,7 +214,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Damos doble click y aparecerá una ventana de CMD así:
                             </p>
                             <div class="text-center">
@@ -285,7 +222,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Seleccionamos la opción a, damos enter y nos va a preguntar el nombre de usuario, podemos poner cualquiera y volvemos a dar enter. Nos pedirá una contraseña, la contraseña puede ser cualquiera, pero para fácil acceso utilizamos 1234, nos dará un aviso de que debe de ser de 8 caracteres, pero podemos seguir poniendo yes en la consola, nos preguntará en qué grupo queremos añadir al usuario, solamente presionamos enter y seguimos, le damos yes de nuevo y añadirá al usuario en el grupo antes dicho, en la última ponemos no y terminamos.
                             </p>
                             <div class="text-center">
@@ -293,7 +230,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Reiniciamos el servidor. Ahora toca hacer un test de conexión con la base datos. Para esto iremos a nuestro navegador e iremos a la siguiente dirección: localhost:9990, nos pedirá el usuario y contraseña para entrar.
                             </p>
                             <div class="text-center">
@@ -301,15 +238,15 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
-                                Seleccionamos la pestaña “Runtime”. Y vamos a donde sale la imagen y seleccionamos”View”.
+                            <p class="h6 p_sec">
+                                Seleccionamos la pestaña “Runtime”. Y vamos a donde sale la imagen y seleccionamos ”View”.
                             </p>
                             <div class="text-center">
                                 <img src="img/img26.jpg" class="img-fluid rounded" alt="...">
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Seleccionamos poolCSA y damos a “Test Connection”.
                             </p>
                             <div class="text-center">
@@ -317,7 +254,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 El servidor ya quedó listo con la conexión para la base de datos.
                             </p>
                             <div class="text-center">
@@ -329,9 +266,9 @@
                 </li>
                 <li>
                     <h4>Oracle.</h4>
-                    <ol class="ol2">
+                    <ol class="ol2" style="list-style: none;">
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Para trabajar con la base de datos, Oracle SQL Developer, se puede utilizar otro manejador de base de datos.
                                 <br/><br/>El instalador se encuentra en la carpeta Oracle SQL Developer dentro del manual. Primero debemos instalar el que viene en la carpeta OracleXE/DISK1.
                             </p>
@@ -340,7 +277,7 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Hecho esto, debemos de ubicarnos en la carpeta sqldeveloper-4.1.0.19.07-no-jre, abrimos sqldeveloper-4.1.0.19.07-no-jre\sqldeveloper\sqldeveloper.exe
                             </p>
                             <div class="text-center">
@@ -348,16 +285,16 @@
                             </div>
                         </li>
                         <li>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Primero tenemos que configurar una conexión a una base de datos, en nuestro caso utilizaremos la siguiente configuración:
-                                <br/>Nombre del host: ec2-13-58-25-192.us-east-2.compute.amazonaws.com
+                                <br/>Nombre del host: ec2-13-58-25-192.us-east-2.compute.amazonaws.com (El host puede cambiar, pregunta al maestro si falla).
                                 <br/>Usuario: CAPACITACION
                                 <br/>Contraseña: CAPACITACION#05032019
                             </p>
                             <div class="text-center">
                                 <img src="img/img31-2.jpg" class="img-fluid rounded" alt="...">
                             </div> 
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Damos en probar conexión y en Estado: debe de decir “Correcto”. Por ultimo le das en Guardar y Conectar.
                             </p>
                         </li>
@@ -368,7 +305,7 @@
                     <ol class="ol2">
                         <li>
                             <p>Entidades</p>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Una entidad es la representación de una tabla en la base de datos. Cada instancia de esta, es una fila que se puede consultar, eliminar, modificar y agregar. Debido a que las entidades son objetos, estos pueden tener otros objetos dentro de ellas. Ejemplo: <br/>
                                 <code>
                                     public class Auto{ <br/>
@@ -386,58 +323,54 @@
                                 En esta consulta, se manda a pedir la descripción de la marca y el modelo en donde el id de cada uno en el automóvil sea igual en cada una de sus tablas, en el caso de modelo se tiene que tomar en cuenta la marca también porque los modelos vienen de una marca de automóviles. 
                                 <br/><br/>La tabla sobre la que vamos a trabajar será la siguiente: ALUMNOS <br/><br/>
                                 Query: 
-                                <code class="code-build">
-                                    <span class="pr">CREATE TABLE</span> ALUMNOS()
+                                <code>
+                                    <span class="blue">CREATE TABLE</span> ALUMNOS(MATRICULA <span class="blue">NUMBER(8,0) NOT NULL</span> , NOMBRES <span class="blue">VARCHAR2(100)</span>, APELLIDOPATERNO <span class="blue">VARCHAR2(100)</span>, APELLIDOMATERNO <span class="blue">VARCHAR2(100)</span>, ACTIVO <span class="blue">VARCHAR2(2)</span>, CREADOPOR <span class="blue">VARCHAR2(40)</span>, MODIFICADOPOR <span class="blue">VARCHAR2(40)</span>, FECHAHORACAPTURA <span class="blue">DATE</span>, FECHAHORAMODIFICACION <span class="blue">DATE</span>);
 
                                 </code>
                             </p>
                             <div class="text-center">
                                 <img src="img/img32.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Cremos un nuevo package (EN CASO DE QUE YA EXISTA PUEDES OMITIR ESTOS PASOS DANDO CLIC <a href="#omitir">AQUI</a>) y lo nombramos CAPACITACION
                             </p>
                             <div class="text-center">
                                 <img src="img/img36.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Cuando sea creado, aparecera una nueva pestaña en el diseño, y damos clic al boton de guardar
                             </p>
                             <div class="text-center">
                                 <img src="img/img37.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">Una vez guarado, aparecera así. Recuerda que tu package debe tener por nombre "CAPACITACION"</p>
+                            <p class="h6 p_sec">Una vez guarado, aparecera así. Recuerda que tu package debe tener por nombre "CAPACITACION"</p>
                             <div class="text-center">
                                 <img src="img/img38.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">Seleccionamos el package CAPACITACION clic derecho, clic a "Crear cuerpo" y clic en salvar todo</p>
+                            <p class="h6 p_sec">Seleccionamos el package CAPACITACION clic derecho, clic a "Crear cuerpo" y clic en salvar todo</p>
                             <div class="text-center">
                                 <img src="img/img39.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Entramos a la carpeta del tutoria, luego en la carpeta SQL, entras al archivo body.sql copias y remplazas todo en CAPACITACION Body de SQLDeveloper
                             </p>
                             <div class="text-center">
                                 <img src="img/img40.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Al copiarlo quedara así
                             </p>
                             <div class="text-center">
                                 <img src="img/img41.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Luego entramos al nivel de CAPACITACION y copiamos del archivo capacitacion.sql a CAPACITACION de SQLDeveloper
                             </p>
                             <div class="text-center">
                                 <img src="img/img42.jpg" class="img-fluid rounded" alt="...">
                             </div>
                             <p id="omitir"></p>
-
-
-
-                            <br/>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Para las entidades, se crea un proyecto el cual las contiene todas. <br/>
                                 Iremos a File → New → Other → Java Project.
                             </p>
@@ -447,22 +380,133 @@
                             <div class="text-center">
                                 <img src="img/img34.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">Creamos los siguientes paquetes dentro de source: com.matco.manual.entity</p>
+                            <p class="h6 p_sec">Creamos los siguientes paquetes dentro de source: com.matco.manual.entity</p>
                             <div class="text-center">
                                 <img src="img/img35.jpg" class="img-fluid rounded" alt="...">
                             </div>
-                            <p class="h6">
+                            <p class="h6 p_sec">
                                 Hecho esto, tendremos que crear una clase la cual será la entidad, a esta le pondremos “Alumno”.
                                 <br/>El código terminará así:
                             </p>
-                            <p class="h6" style="border-left: 2px dotted #eaeaea; padding: 0% 1%;">
-                                <code class="code-build">
-                                        <span class='pr'>package</span> com.matco.manual.facade; <br>  <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> java.util.ArrayList; <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> java.util.List; <br>  <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> org.apache.log4j.Logger; <br>  <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> com.matco.administradortransacciones.dao.Transaccion; <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> com.matco.administradortransacciones.dao.TransaccionFactory; <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> com.matco.manual.dao.AlumnoDao; <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> com.matco.manual.dao.DaoFactory; <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>import</span></span></span></span></span></span></span></span> com.matco.manual.entity.Alumno; <br>  <br> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> <span class='pr'>class</span> AlumnoFacade { <br>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span> <span class='pr'>static</span> <span class='pr'>final</span> Logger LOG = Logger.getLogger(AlumnoFacade.<span class='pr'>class</span>); <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span> DaoFactory daoFactory; <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span> TransaccionFactory transaccionFactory; <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span> String tabla = "ALUMNOS"; <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> AlumnoFacade(String archivoConfig) { <br>  <span class='tab'></span>  <span class='tab'></span> daoFactory = FactorySingleton.getDaoFactory(); <br>  <span class='tab'></span>  <span class='tab'></span> transaccionFactory = FactorySingleton.getTransaccionFactory(archivoConfig); <br>  <span class='tab'></span> } <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> <span class='pr'><span class='pr'>int</span></span> guardarAlumno(Alumno instancia) <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span>s</span> Exception { <br>  <span class='tab'></span>  <span class='tab'></span> Transaccion tx = transaccionFactory.getTransaccion(); <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.iniciar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> daoFactory.setTransaccion(tx); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> AlumnoDao alumnoDao = daoFactory.getAlumnoDao(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'>int</span></span> dato = alumnoDao.funAgregarAlumno(instancia); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.<span class='pr'>final</span>izar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'>return</span></span></span> dato; <br>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span> (Exception e) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> String mensajeError = "No se pudo guardar el registro: "+<span class='var'>tabla</span>; <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn(mensajeError, e); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn("Intentando hacer rollback al obtener el registro: "+tabla); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.rollback(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception ex) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.error("Fallo al hacer rollback "+tabla, ex); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Exception(mensajeError); <br>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span> } <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> Alumno obtenerAlumnoPorMatricula(<span class='pr'><span class='pr'>int</span></span> matricula) <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span>s</span> Exception { <br>  <span class='tab'></span>  <span class='tab'></span> Alumno alumno = <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Alumno(); <br>  <span class='tab'></span>  <span class='tab'></span> Transaccion tx = transaccionFactory.getTransaccion(); <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.iniciar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> AlumnoDao alumnoDao = daoFactory.getAlumnoDao(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> alumno = alumnoDao.obtenerPorId(String.valueOf(matricula)); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.<span class='pr'>final</span>izar(); <br>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception e) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> String mensajeError = "No se pudo obtener el registro: "+<span class='var'>tabla</span>; <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn(mensajeError, e); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn("Intentando hacer rollback al obtener el registro: "+tabla); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.rollback(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception ex) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.error("Fallo al hacer rollback "+tabla, ex); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Exception(mensajeError); <br>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'>return</span></span></span> alumno; <br>  <span class='tab'></span> } <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> <span class='pr'><span class='pr'>void</span></span> modificarAlumno(Alumno alumno) <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span>s</span> Exception { <br>  <span class='tab'></span>  <span class='tab'></span> Transaccion tx = transaccionFactory.getTransaccion(); <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.iniciar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> daoFactory.setTransaccion(tx); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> AlumnoDao alumnoDao = daoFactory.getAlumnoDao(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> alumnoDao.modificar(alumno); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.<span class='pr'>final</span>izar(); <br>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span> (Exception e) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> String mensajeError = "No se pudo modificar el registro: "+<span class='var'>tabla</span>; <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn(mensajeError, e); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn("Intentando hacer rollback al obtener el registro: "+tabla); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.rollback(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception ex) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.error("Fallo al hacer rollback "+tabla, ex); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Exception(mensajeError); <br>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span> } <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> <span class='pr'><span class='pr'>void</span></span> eliminarAlumno(Alumno alumno) <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span>s</span> Exception { <br>  <span class='tab'></span>  <span class='tab'></span> Transaccion tx = transaccionFactory.getTransaccion(); <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.iniciar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> daoFactory.setTransaccion(tx); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> AlumnoDao alumnoDao = daoFactory.getAlumnoDao(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> alumnoDao.eliminar(alumno); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.<span class='pr'>final</span>izar(); <br>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span> (Exception e) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> String mensajeError = "No se pudo eliminar el registro: "+<span class='var'>tabla</span>; <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn(mensajeError, e); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn("Intentando hacer rollback al obtener el registro: "+tabla); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.rollback(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception ex) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.error("Fallo al hacer rollback "+tabla, ex); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Exception(mensajeError); <br>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span> } <br>  <span class='tab'></span>  <br>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span> List<Alumno> obtenerTodosAlumnos() <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span>s</span> Exception { <br>  <span class='tab'></span>  <span class='tab'></span> List<Alumno> listAlumnos = <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> ArrayList<Alumno>(); <br>  <span class='tab'></span>  <span class='tab'></span> Transaccion tx = transaccionFactory.getTransaccion(); <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.iniciar(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> daoFactory.setTransaccion(tx); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> AlumnoDao alumnoDao = daoFactory.getAlumnoDao(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> listAlumnos = alumnoDao.obtenerTodos(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.<span class='pr'>final</span>izar(); <br>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span> (Exception e) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> String mensajeError = "No se pudo obtener todos los registro: "+<span class='var'>tabla</span>; <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn(mensajeError, e); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>try</span></span></span></span></span></span></span></span></span></span> { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.warn("Intentando hacer rollback al obtener el registro: "+tabla); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> tx.rollback(); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <span class='pr'><span class='pr'><span class='pr'><span class='pr'>catch</span></span></span></span>(Exception ex) { <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> LOG.error("Fallo al hacer rollback "+tabla, ex); <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>throw</span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>new</span></span></span></span></span></span></span> Exception(mensajeError); <br>  <span class='tab'></span>  <span class='tab'></span> } <br>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'>return</span></span></span> listAlumnos; <br>  <span class='tab'></span> } <br> }
-                                </code>
-
-                                
+                            <div class="text-center">
+                                <img src="img/img43.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                <a data-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapse1">
+                                    Codigo: Alumno.java
+                                </a>
                             </p>
-                        </li>   
+                            <div class="collapse" id="collapse1">
+                                <p class="h6 panel-code">
+                                    <code class="code-build" id="code1">
+                                        <span class='pr'>package</span> com.matco.manual.entity; <br/>  <br/> <span class='pr'><span class='pr'>import</span></span> java.io.Serializable; <br/> <span class='pr'><span class='pr'>import</span></span> java.util.Date; <br/>  <br/> <span class='pr'>public</span> <span class='pr'>class</span> Alumno <span class='pr'>implements</span> Serializable{ <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> Integer <span class='var'>matricula</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>nombres</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>apellidoPaterno</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>apellidoMaterno</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>activo</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>creadoPor</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> String <span class='var'>modificadoPor</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> Date <span class='var'>fechaHoraCreacion</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span> Date <span class='var'>fechaHoraModificacion</span>; <br/> }   
+                                    </code>
+                                </p>
+                            </div>
+                            <p class="h6 p_sec">
+                                Damos clic derecho en el foco de la linea 6 y seleccionamos la opción <span class="blue under-line"><i class="fas fa-plus" style="color: rgb(81, 157, 110);"></i> Add generated Serial version ID</span>
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img44.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                Añadimos los Getters y Setters de nuestras variables privadas, dando clic derecho en cualquier parte del codigo
+
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img45.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <div class="text-center">
+                                <img src="img/img46.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec" id="entidades">
+                                <a data-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">
+                                    Codigo: Alumno.java
+                                </a>
+                            </p>
+                            <div class="collapse" id="collapse2">
+                                <p class="h6 panel-code">
+                                    <code class="code-build">
+                                        <span class='pr'>package</span> com.matco.manual.entity; <br/>  <br/> <span class='pr'><span class='pr'>import</span></span> java.io.Serializable; <br/> <span class='pr'><span class='pr'>import</span></span> java.util.Date; <br/>  <br/> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'>class</span> Alumno <span class='pr'>implements</span> Serializable{ <br/>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> <span class='pr'>static</span> <span class='pr'>final</span> <span class='pr'>long</span> <span class="var">serialVersionUID</span> = 457348245731434534L; <span class='com'>//este dato puede variar</span> <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> Integer <span class='var'>matricula</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>nombres</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>apellidoPaterno</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>apellidoMaterno</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>activo</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>creadoPor</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> String <span class='var'>modificadoPor</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> Date <span class='var'>fechaHoraCreacion</span>; <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>private</span></span></span></span></span></span></span></span></span></span> Date <span class='var'>fechaHoraModificacion</span>; <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'>int</span> getMatricula() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>matricula</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setMatricula(<span class='pr'>int</span> matricula) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>matricula</span> = <span class='var'>matricula</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getNombres() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>nombres</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setNombres(String nombres) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>nombres</span> = <span class='var'>nombres</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getApellidoPaterno() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>apellidoPaterno</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setApellidoPaterno(String apellidoPaterno) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>apellidoPaterno</span> = <span class='var'>apellidoPaterno</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getApellidoMaterno() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>
+                                        <span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>apellidoMaterno</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setApellidoMaterno(String apellidoMaterno) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>apellidoMaterno</span> = <span class='var'>apellidoMaterno</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getActivo() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>activo</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setActivo(String activo) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>activo</span> = <span class='var'>activo</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getCreadoPor() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>creadoPor</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setCreadoPor(String creadoPor) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>creadoPor</span> = <span class='var'>creadoPor</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> String getModificadoPor() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>modificadoPor</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setModificadoPor(String modificadoPor) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>modificadoPor</span> = <span class='var'>modificadoPor</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> Date getFechaHoraCreacion() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>fechaHoraCreacion</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setFechaHoraCreacion(Date fechaHoraCreacion) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>fechaHoraCreacion</span> = <span class='var'>fechaHoraCreacion</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> Date getFechaHoraModificacion() { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>return</span></span></span></span></span></span></span></span></span> <span class='var'>fechaHoraModificacion</span>; <br/>  <span class='tab'></span> } <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>public</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> <span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'><span class='pr'>void</span></span></span></span></span></span></span></span></span> setFechaHoraModificacion(Date fechaHoraModificacion) { <br/>  <span class='tab'></span>  <span class='tab'></span> <span class='pr'>this</span>.<span class='var'>fechaHoraModificacion</span> = <span class='var'>fechaHoraModificacion</span>; <br/>  <span class='tab'></span> } <br/> }
+                                    </code>
+                                </p>
+                            </div>
+                            <p class="h6 p_sec" >
+                                Se crean los getter y setter de cada campo, guardamos y ya terminamos esa entidad. <br/>
+                                Por último exportamos el jar con nombre <span class="blue">entidades-manuales-1.0.0.jar</span>
+                                Damos clic en File → Export → Java/JAR File → Next. Exportamos donde gustes pues lo usaremos mas tarde.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img47.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <div class="text-center">
+                                <img src="img/img48.png" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
+                        <li>
+                            <p>Persistencia</p>
+                            <p class="h6 p_sec">
+                                La persistencia en acceso a datos se utiliza para poder mandar consultas a la base de datos creando capas dentro de la misma, aquí se crean interfaces DAO, clases DAO jdbc y la fachada. <br/><br/>
+                                ¿Qué es un DAO?<br/>
+                                Un Data Access Object (DAO) es un objeto que provee una interfaz abstracta a algunos tipos de base de datos u otros mecanismos de persistencia. Esta guía las llamada de la aplicación a la capa de persistencia, el DAO provee algunas operaciones de datos específicas sin exponer las llamadas de la base de datos. Esto está considerado como buena práctica por Sun Microsystems. <br/>
+                                <br/>¿Qué es un DAO jdbc? <br/>
+                                Un jdbc utiliza los métodos de la interfaz de DAO de su tabla y un DAO genérico, el genérico puede contener las operaciones normales (guardar, modificar, eliminar, obtenerTodos y obtenerPorID), aquí va la lógica de la llamada con la conexión a la base de datos, aquí se generan los query para llamar a la base de datos, estos son representados por String, en cada método se maneja la lógica correspondiente a cada tipo de consulta. También se ven los métodos creados en cada DAO que hayamos creado aparte del genérico, las operaciones especiales para las tablas. <br/> <br/>
+                                ¿Qué es una fachada? <br/>
+                                El patrón de fachada es un patrón de diseño de software, se usa comúnmente en la programación orientada a objetos. La fachada, como su nombre lo dice, es un objeto que sirve como cara a mostrar al cliente, esta enmascara el código más complejo que está debajo de ella. Los desarrolladores utilizan este patrón cuando el diseño del código de un proyecto es complejo o difícil de entender.
+                                <br/> <br/>
+                                ¿Cómo sé cuáles métodos genéricos debo de utilizar? ¿Y si ocupo un procedimiento o función que no es genérico? <br/>
+                                Es fácil, para encontrar los procedimientos, primero debemos ir a la base de datos, buscar en PACKAGES, PROCEDURES y FUNCTIONS cuáles son los que necesitamos dependiendo de nuestra tabla, por lo general los nombres llevan esta nomenclatura: “TIPO”_”ACCION”_”TABLA”
+                                Los que se necesitan en este manual son los siguientes: <br/><br/>
+                                “PRO_GET_ALL_ALUMNOS” – Obtiene todos los alumnos de la tabla.  <br/>
+                                “PRO_GET_ALUMNO” – Obtiene un alumno por su ID. <br/>
+                                “PRO_EDIT_ALUMNO” – Edita la información de un alumno. <br/>
+                                “PRO_DEL_ALUMNO” – Elimina un alumno por su ID. <br/>
+                                “FUN_ADD_ALUMNO” – Agrega a un alumno y le asigna un ID. <br/>
+                            </p>
+                            <p class="h6 p_sec">
+                                Crearemos un proyecto para la persistencia. A este le llamaremos PersistenciaManual.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img49.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                Antes de empezar, debemos agregar algunas librerías que utilizaremos en nuestra persistencia para poder trabajar con ella.
+                                <br/>
+                                Primero crearemos una carpeta llamada <span class="blue">lib</span> dando clic derecho en nuestro proyecto → New → Folder
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img51.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                Nos ubicamos en la carpeta del proyecto y copiamos los JAR mostrados en la carpeta lib que creamos.
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img50.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                Copiamos el JAR <span class="blue">entidades-manuales-1.0.0.jar</span> que acabos de crear en la carpeta lib <br/> 
+                                <a href="#entidades">(Si se te ha olvidado da clic aquí)</a>
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img52.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                Para poder utilizar las librerías, click derecho al proyecto → Propierties → Java Build Path → pestaña Libraries → add JARs..
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img55.png" class="img-fluid rounded" alt="...">
+                            </div>
+                            <p class="h6 p_sec">
+                                En src debemos crear los siguientes paquetes:<br>
+                                <span class="blue">com.matco.manual.dao</span><br>
+                                <span class="blue">com.matco.manual.dao.jdbc</span><br>
+                                <span class="blue">com.matco.manual.facade</span><br>
+                            </p>
+                            <div class="text-center">
+                                <img src="img/img56.png" class="img-fluid rounded" alt="...">
+                            </div>
+                        </li>
                     </ol>
                 </li>
             </ol>

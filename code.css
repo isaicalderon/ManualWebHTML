@@ -1,10 +1,17 @@
+.panel-code{
+	border-left: 2px dotted #eaeaea;
+	padding: 0% 1%;
+	line-height: 1;
+}
+
 .code-build{
 	color: black;
 	font-size: 87.5%;
     word-break: break-word;
 }
 .pr{
-	color: #e83e8c;
+	/*color: #e83e8c;*/
+	color: rgb(149, 0, 85);
 	font-weight: bold;
 }
 .var{
@@ -12,4 +19,7 @@
 }
 .tab{
 	margin-left: 2.5em;
+}
+.com{
+	color: rgba(39, 174, 96,1.0);
 }
