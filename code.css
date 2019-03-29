@@ -23,3 +23,19 @@
 .com{
 	color: rgba(39, 174, 96,1.0);
 }
+.com-multi{
+	color: #2980b9/*#007bff*/;
+}
+.par-com{
+	color: #95afc0;
+	font-weight: 600;
+}
+.static{
+	font-weight: 700;
+	color: mediumblue/*#219*/;
+	font-style: italic;
+}
+
+.name-var{
+	color: #997e58;
+}
