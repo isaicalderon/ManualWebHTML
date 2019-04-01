@@ -55,6 +55,9 @@ li{
     padding: 0.5%;
     border-radius: 5px;
     text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 @media (min-width: 768px) {

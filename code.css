@@ -2,6 +2,8 @@
 	border-left: 2px dotted #eaeaea;
 	padding: 0% 1%;
 	line-height: 1;
+	font-weight: 400;
+    font-size: 1rem;
 }
 
 .code-build{
@@ -37,5 +39,5 @@
 }
 
 .name-var{
-	color: #997e58;
+	color: rgb(141, 69, 44)
 }
