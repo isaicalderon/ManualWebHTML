@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Isai Aleman">
+        <meta name="generator" content="">
+        <title>Manual de Aplicaciones WEB</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+        <!-- Bootstrap core CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/code.css">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <!-- Custom styles for this template -->
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="../index.html">Manual Aplicaciones Web / Wildfly v10.x</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" 
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+            </div>
+        </nav>
+
+    <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
+        <div >
+            <ol class="ol2" style="list-style: none;">
+                <li>
+                    <p class="h6 p_sec">
+                        Ya teniendo JBoss Tools instalado, procederemos a instalar un servidor de Wildfly, en este caso utilizamos la versión 10.x final.
+                        Seleccionamos la pestaña de Servers, si no se encuentra en la view de Eclipse podemos buscarla en
+                        Window → Show View → Servers.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img11.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Seleccionamos la opción <span class="no-server">“No servers are available. Click this link to create a new server.”</span>   y seleccionamos el servidor Wildfly 10.x.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img12.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                    <br/>
+                    <div class="text-center">
+                        <img src="../img/img13.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Ya que aún no tenemos un runtime para el servidor, tendremos que descargarlo. Seleccionamos <span class="no-server">“Download and install runtime…”</span> 
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img14.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                    <br/>
+                    <div class="text-center">
+                        <img src="../img/img15.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                    <br/>
+                    <div class="text-center">
+                        <img src="../img/img16.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Finalizamos y saldrá algo así.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img17.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Ahora tenemos que configurar nuestro Wildfly para las aplicaciones web.
+                        Vamos a la carpeta en donde se instaló y buscamos la carpeta bin.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img18.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Entramos y pegamos los siguientes archivos que están en la carpeta “Conexión a base de datos”:
+                        <br/><span class="no-server">admintx_csa.properties</span>, <span class="no-server">log4j_csa.properties</span> y <span class="no-server"> log4j.properties</span>
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img19.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Ahora tendremos que copiar la carpeta modules de la carpeta “Conexión a base de datos” y pegarla en la raíz de wildfly, para verificar que se metieron los archivos hay que llegar hasta esta ruta: modules/system/layers/base/com/oracle/main y encontrar los siguientes archivos: module.xml y ojdbc7.jar.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img20.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Tenemos que configurar la conexión de Wildfly a la base de datos, para eso buscaremos en la carpeta raíz de wildfly-10.1.0.Final/standalone/configuration/standalone.xml aquí tenemos que reemplazar por el que viene en “Conexión a base de datos”. Este contiene un pool para la conexión, el cual se verá reflejado en los siguientes pasos.
+                        <br/><br/>Ahora tendremos que configurar el puerto con el que vamos a entrar a la aplicación web, esto se hace debido a que el puerto que utiliza el XE de Oracle SQL Developer puede causar conflicto con el 8080 y no podremos entrar a la aplicación. Esto se hace en la siguiente imagen.
+
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img21.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Hecho esto, guardamos con ctrl+s y daremos click derecho al servidor, le damos Start y empezará a levantar el servidor en localhost. <br/><br/>
+                        Para poder ingresar a localhost:9990 que es la dirección de administración de Wildfly, se necesita crear un usuario, para esto vamos a la carpeta de Wildfly y buscamos el siguiente archivo: 
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img22.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Damos doble click y aparecerá una ventana de CMD así:
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img23.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Seleccionamos la opción a, damos enter y nos va a preguntar el nombre de usuario, podemos poner cualquiera y volvemos a dar enter. Nos pedirá una contraseña, la contraseña puede ser cualquiera, pero para fácil acceso utilizamos 1234, nos dará un aviso de que debe de ser de 8 caracteres, pero podemos seguir poniendo yes en la consola, nos preguntará en qué grupo queremos añadir al usuario, solamente presionamos enter y seguimos, le damos yes de nuevo y añadirá al usuario en el grupo antes dicho, en la última ponemos no y terminamos.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img24.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Reiniciamos el servidor. Ahora toca hacer un test de conexión con la base datos. Para esto iremos a nuestro navegador e iremos a la siguiente dirección: localhost:9990, nos pedirá el usuario y contraseña para entrar.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img25.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Seleccionamos la pestaña “Runtime”. Y vamos a donde sale la imagen y seleccionamos ”View”.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img26.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        Seleccionamos poolCSA y damos a “Test Connection”.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img27.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+                <li>
+                    <p class="h6 p_sec">
+                        El servidor ya quedó listo con la conexión para la base de datos.
+                    </p>
+                    <div class="text-center">
+                        <img src="../img/img28.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <a href="#" class="scrollup">Scroll</a>
+    </main>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+      
+            $('.scrollup').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+            
+        });
+    </script>
+    </body>
+</html>

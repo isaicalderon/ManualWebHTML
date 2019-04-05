@@ -1,0 +1,43 @@
+.panel-code{
+	border-left: 2px dotted #eaeaea;
+	padding: 0% 1%;
+	line-height: 1;
+	font-weight: 400;
+    font-size: 1rem;
+}
+
+.code-build{
+	color: black;
+	font-size: 87.5%;
+    word-break: break-word;
+}
+.pr{
+	/*color: #e83e8c;*/
+	color: rgb(149, 0, 85);
+	font-weight: bold;
+}
+.var{
+	color: mediumblue/*#219*/;
+}
+.tab{
+	margin-left: 2.5em;
+}
+.com{
+	color: rgba(39, 174, 96,1.0);
+}
+.com-multi{
+	color: #2980b9/*#007bff*/;
+}
+.par-com{
+	color: #95afc0;
+	font-weight: 600;
+}
+.static{
+	font-weight: 700;
+	color: mediumblue/*#219*/;
+	font-style: italic;
+}
+
+.name-var{
+	color: rgb(141, 69, 44)
+}
