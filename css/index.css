@@ -65,11 +65,21 @@ li{
     height:40px;
     opacity:0.3;
     position:fixed;
-    bottom:50px;
+    bottom: 100px;
     right:100px;
     display:none;
     text-indent:-9999px;
     background: url('../img/icon_top.png') no-repeat;
+}
+
+.backPage{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:50px;
+    right:100px;
+    /*background: url('../img/icon_back.png') no-repeat;*/
 }
 
 @media (min-width: 768px) {
