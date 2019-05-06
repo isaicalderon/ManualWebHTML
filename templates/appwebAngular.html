@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Isai Aleman">
+        <meta name="generator" content="">
+        <title>Manual de Aplicaciones WEB</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+        <!-- Bootstrap core CSS -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/code.css">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+        <!-- Custom styles for this template -->
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="../index.html">Manual Aplicaciones Web / Aplicacion Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" 
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="#"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+                     -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                     -->
+                </ul>
+
+                <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                 -->
+            </div>
+        </nav>
+
+    <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
+        <ol class="ol2">
+            <li>
+                <p>Instalacion de Visual Studio Code</p>
+                <p class="p_sec">
+                    Este programa será el IDE con que vamos a trabajar. <br/>
+                    Entras a la pagina y lo descargas: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+                </p>
+                <p class="p_sec">
+                    Vamos a requerir también de Eclipse JEE con Wildfly instalado asi como viene en el primer tutorial: 
+                    <a href="requerimientos.html" target="_blank">Requerimientos</a>, <a href="wildfly.html" target="_blank">Wildfly</a>
+                </p>
+                <p class="p_sec">
+                    Una vez descargado e instalado Visual Studio Code al abrirlo tendremos esta interfaz
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/1.png" class="img-fluid rounded" alt="...">
+                </div>
+            </li>
+            <li>
+                <p>Instalacion de NodeJs</p>
+                <p class="p_sec">
+                    Vamos a requerir de NodeJs para trabajar con PrimeNG for Angular <br/>
+                    Entras a la pagina y lo descargas: <a href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a>
+                </p>
+                <p class="p_sec">
+                    Una vez descargado e instalado NodeJs lo siguiente es probar que funciona abriendo la terminal o el CMD y ejecutar este comando: 
+                    <span class="blue" >node --version</span>
+                    <br/>
+                    <i class="fab fa-windows"></i> Windows: <kbd><i class="fab fa-windows"></i> + R: CMD</kbd> <br/>
+                    <i class="fab fa-linux"></i> Linux: <kbd>Ctrl + Alt + T</kbd> <br/>
+                </p>
+                <p class="p_sec">
+                    En mi caso estoy usando la terminal de github, la terminal deberá responder con la versión instalada de NodeJs
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/2.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Ahora vamos a crear un nuevo proyecto ejecutando este comando en la terminal: <span class="blue">ng new ManualWebAngular</span> <br/>
+                    Cuando se ejecute se descargaran los paquetes necesarios para trabajar con Angular (tardará un tiempo).
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/3.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Con la terminal entramos al proyecto y ejecutamos estos comandos para trabajar con PrimeNG <br/>
+                    Para entrar: <span class="blue">cd ManualWebAngular</span> <br/>
+                    $ <span class="blue">npm install primeng --save</span> <br/>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/4.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    $ <span class="blue">npm install primeicons --save</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/5.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    $ <span class="blue">npm install @angular/animations --save</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/6.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    $ <span class="blue">npm install @angular/cdk --save</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/7.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Instalamos estos tres frameworks de la misma manera <br/>
+                    $ <span class="blue">npm install bootstrap --save</span> <br/>
+                    $ <span class="blue">npm install jquery@1.9.1 --save</span> <br/>
+                    $ <span class="blue">npm install popper.js --save</span>
+                </p>
+                <p class="p_sec">
+                    Abrimos el proyecto con Visual Studio Code <br/>
+                    File → Open Folder...
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/8.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/9.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Los paquetes ya fueron instalados en nuestro proyecto, ahora solo nos falta
+                    hacer que el programa los lea. Abrimos el archivo <span class="blue">angular.json</span>, 
+                    buscamos el nodo <span class="blue">styles</span> y copiamos los estilos:
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+  "node_modules/primeicons/primeicons.css",
+  "node_modules/primeng/resources/themes/nova-light/theme.css",
+  "node_modules/primeng/resources/primeng.min.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"</code>
+                </pre>
+                <div class="text-center">
+                    <img src="../img/primeng/10.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Hacemos lo mismo con el nodo <span class="blue">scrips</span>
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+    "node_modules/jquery/jquery.min.js",
+    "node_modules/popper.js/dist/popper.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+                    </code>
+                </pre>
+                <div class="text-center">
+                    <img src="../img/primeng/11.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Guardamos y cerramos
+                </p>
+                <p class="p_sec">
+                    Entramo a la carpeta <span class="blue">app</span> y abrimos el archivo app.module.ts <br/>
+                    Este TypeScript seria nuestra clase principal donde vamos a hacer todas las importaciones de la carpeta node_modules
+                    para trabajar
+                </p>
+                <p class="p_sec">
+                    Importamos estas clases <br/> 
+                    <span class="blue">import {BrowserAnimationsModule} from '@angular/platform-browser/animations';</span> <br/>
+                    <span class="blue">import { FormsModule } from '@angular/forms';</span> <br/>
+                    <span class="blue">import {AccordionModule} from 'primeng/accordion';</span> <br/>
+                    <span class="blue">import {MenuItem} from 'primeng/api';</span> <br/>
+
+                    Si no la importamos podría darnos error cuando queramos trabajar con PrimeNG
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/12.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Dentro de Visual Studio Code <br/>
+                    Terminal → New Terminal
+                </p>
+                <p class="p_sec">
+                    Al abrir la terminal ejecutamos este comando <span class="blue">npm start</span> para compilar y ejecutar nuestro proyecto. <br/>
+                    Puede tardar un tiempo.
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/13.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Abrimos el navegador y comprobamos que se ha creado nuestra página web: <span class="blue"><a href="http://localhost:4200/" target="_blank">http://localhost:4200/</a></span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/14.png" class="img-fluid rounded" alt="...">
+                </div>
+            </li>
+        </ol>
+        <a href="#" class="scrollup">Scroll</a>
+        <a href="../index.html" class="backPage"><img style="width: inherit;height: inherit;" src="../img/icon_back.png"></a>
+        
+    </main>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+      
+            $('.scrollup').click(function(){
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+            
+        });
+    </script>
+
+    </body>
+</html>
