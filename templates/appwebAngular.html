@@ -63,11 +63,12 @@
 
     <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
         <ol class="ol2">
+            
             <li>
                 <p>Instalacion de Visual Studio Code</p>
                 <p class="p_sec">
                     Este programa será el IDE con que vamos a trabajar. <br/>
-                    Entras a la pagina y lo descargas: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+                    Entras a la pagina y lo descargas: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> theme: Monaki (Opcional)
                 </p>
                 <p class="p_sec">
                     Vamos a requerir también de Eclipse JEE con Wildfly instalado asi como viene en el primer tutorial: 
@@ -181,7 +182,7 @@
                     Guardamos y cerramos
                 </p>
                 <p class="p_sec">
-                    Entramo a la carpeta <span class="blue">app</span> y abrimos el archivo app.module.ts <br/>
+                    Entramo a la carpeta <span class="blue">src/app</span> y abrimos el archivo app.module.ts <br/>
                     Este TypeScript seria nuestra clase principal donde vamos a hacer todas las importaciones de la carpeta node_modules
                     para trabajar
                 </p>
@@ -214,6 +215,343 @@
                 <div class="text-center">
                     <img src="../img/primeng/14.png" class="img-fluid rounded" alt="...">
                 </div>
+                <p class="p_sec">
+                    Ya tenemos lista nuestra primera parte de este proyecto
+                </p>
+                <p class="p_sec">
+                    Empezemos a programar abriendo <span class="blue">src</span>/<span class="blue">app</span>/<span class="name-var">app.component.html</span> <br>
+                    Este HTML es nuestra primera ruta que enlaza nuestro proyecto del <span class="blue">src</span>/<span class="name-var">index.html</span> con la etiqueta 
+                    <span class="pr"> &lt;app-root&gt;&lt;/app-root&gt; </span> y lo declaramos en 
+                    <span class="blue">src</span>/<span class="name-var">app.component.ts</span>.
+                    Una manera de verlo es que los .html serian nuestros diseño y .ts nuestra clase
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/15.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Ya que estamos aquí en el index, le agregamos la clase bg-dark2 a la etiqueta body:
+                    &lt;body class='bg-dark2'&gt;
+                </p>
+                <p class="p_sec">
+                    Ubicados en <span class="blue">src</span>/<span class="name-var">app.component.ts</span> <br>
+                    @Component enlaza nuestro <span class="name-var">app.component.html</span> y su css para trabajar con angular en su propia clase que en este caso se llama <span class="com">AppComponent</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/16.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Abrimos <span class="name-var">app.component.html</span> y borramos el código que viene porque vamos a escribir código nuevo
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/17.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Agregamos nuestra primera etiqueta: <span class="blue">nav</span>
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+ &lt;nav class="navbar navbar-dark" style="background: rgba(0,0,0,0.8);padding: 0 1rem;"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;
+        &lt;img style="float:left;margin-right: 10px;" src="matcocat.png" width="60%"  class="d-inline-block align-top" alt=""&gt;
+    &lt;/a>
+    &lt;div style="float:right"&gt;
+        &lt;p style="margin-top:10px;color: #FFCC00 !important;font-size: 25px;"&gt;
+            Capacitación
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <p class="p_sec">
+                    Resultado:
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/18.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/19.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Vamos a agregar la imagen y los estilos que nos faltan
+                    <br>
+                    Esta es la imagen <a href="../img/primeng/matcocat.png" target="_blank">matcocat.png</a> descarga y guarda en la carpeta <span class="blue">src</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/20.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Tranquilo vaquero, solo falta importarla
+                </p>
+                <p class="p_sec">
+                    Abrimos el archivo <span class="blue">angular.json</span>, buscamos el nodo assets y lo agregamos <br>
+                    <span class="blue">"src/matcocat.png"</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/21.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Reinicia el servidor y debería mostrarse la imagen
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/22.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Ahora copiamos los estilos que se muestran abajo, en el archivo <span class="blue">src</span>/<span class="name-var">styles.css</span>
+                </p>
+                <h4 class="p_sec">
+                    <a data-toggle="collapse" href="#styles" role="button" >styles.css</a>
+                </h4>
+                <div class="collapse" id="styles">
+                    <pre class="panel-code">
+                        <code class="code-build">
+footer{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 10px !important;
+}
+.container-fluid {
+    width: 99%;
+}
+#altaAlumno{
+    background: rgba(0,0,0,0.5);
+}
+button, input{
+    outline: none;
+}
+.btn-dark{
+    margin-left: 10px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+body .ui-dialog .ui-dialog-titlebar{
+    background: #3f3f3f;
+    border: none;
+    color: #fff;
+    text-transform: uppercase; 
+}
+
+.btn-dialog{
+    width: 100%;
+    margin: 0 auto;
+    height: 3em;
+    
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.pd-07{
+    padding: 0.7%;
+}
+
+.f-left{
+    margin-right: 10px;
+    float: left
+}
+.form-group{
+    margin-bottom: 0;
+}
+
+.border-mid{
+    border-radius: 0 0 0 0;
+}
+
+.border-top{
+    border-radius: 5px 5px 0 0;
+}
+
+.border-bot{
+    border-radius: 0 0 5px 5px; 
+}
+
+.no-b-b{
+    border-bottom: none;
+}
+
+.dp-none{
+    display: none;
+}
+
+.bg-dark2{
+    background: #313131 !important;
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/23.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    El background de nuestra página debería cambiar
+                </p>
+
+                <p class="p_sec">
+                    Debajo de la etiqueta nav agregaremos un div con la clase <span class="blue">.container-fluid .pd-07</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/24.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Agregamos el primer componente de primeNG, dentro del div.container-fluid <br> <br>
+                    <span class="blue">&lt;p-breadcrumb [model]="menuNav"&gt;&lt;/p-breadcrumb&gt;</span> <br> <br>
+                    <a href="https://www.primefaces.org/primeng/#/breadcrumb" target="_blank">Breadcrumb</a> proporciona información contextual sobre la jerarquía de páginas. <a href="https://www.primefaces.org/primeng/#/menumodel" target="_blank"> MenuModel API</a> <br>
+                    <span class="pr">[modal]</span> con este atributo definimos el nombre con el que será identificado nuestro objeto en un typescript. En este caso su nombre sera menuNav
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/25.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Si actualizamos la pagina no mostrará nada, esto pasa porque existe un error, tenemos que importarlo en <span class="name-var">app.modules.ts</span> y luego lo definimos en <span class="name-var">app.component.ts</span>
+                </p>
+                <p class="p_sec">
+                    Abrimos <span class="name-var">app.modules.ts</span>, importamos esta librería <br> <br>
+                    <span class="blue">import {BreadcrumbModule} from 'primeng/breadcrumb';</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/26.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    El error debió irse pero aún nos falta programar nuestro menuNav ya que está vacío
+                </p>
+                <p class="p_sec">
+                    Abrimos <span class="name-var">app.component.ts</span> y creamos una variable llamada igual que nuestro componente: menuNav y la declaramos como arreglo de MenuItem. <br>
+                    <span class="blue">menuNav:MenuItem[]</span> <br> <br>
+                    Importamos la libreria: 
+                    <span class="blue">import { MenuItem } from 'primeng/api';</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/27.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Creamos un método llamado <span class="blue">ngOnInit()</span> vamos a programar dentro de él. Se requiere que se implemente la interface OnInit <br>
+                    Este metodo se ejecuta cuando la página se halla cargado por completo. <br> <br>
+                    Declaramos sus valores en formato json puede copiar el código de abajo.
+                </p>
+                <pre class="panel-code"><code class="code-build">
+export class AppComponent implements OnInit{
+  
+  menuNav:MenuItem[];
+  
+  ngOnInit(){
+    this.menuNav = [
+      {icon:'pi pi-home'},
+      {label:'Catálogo'},
+      {label:'Alumnos'}
+    ];
+  }
+}
+</code></pre>
+                <p class="p_sec">
+                    El nodo <span class="pr">icon</span> hace referencia a un icono y requiere un <a href="https://www.primefaces.org/showcase/ui/misc/primeicons.xhtml" target="_blank">icon code</a>. <br>
+                    <span class="pr">label</span> hace referencia al texto que estará como titulo del objeto
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/28.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Resultado:
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/29.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Continuamos agregando otro compomente de PrimeNG <br> <br>
+                    <span class="blue">
+                        &lt;p class='mb-10'&gt;&lt;/p&gt; &lt;!-- dejamos espacio con margin-bottom --&gt;
+                        <br>
+                        &lt;p-menubar [model]="menuBar"&gt;&lt;/p-menubar&gt; &lt;!-- etiqueta PrimeNG --&gt;
+                    </span> <br> <br>
+                        Este elemento es muy similar al menuNav que recien creamos, y en este caso el elemento toma por nombre <span class="blue">menuBar</span> en <span class="pr">[model]</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/30.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Importamos la librearía <span class="blue">import {MenubarModule} from 'primeng/menubar';</span> en <span class="name-var">app.modules.ts</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/32.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Lo que sigue es crear y definir el menubar
+                </p>
+                <p class="p_sec">
+                    Abrimos <span class="name-var">app.component.ts</span> <br> <br>
+                    Creamos una nueva variable llamada menuBar y la definimos como arreglo MenuItem[] <br>
+                    <br>
+                    <span class="blue">menuBar:MenuItem[ ];</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/31.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Agregaremos objetos al elemento con formato json, copia el código que viene abajo
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+this.menuBar = [
+  {
+      label: 'Opciones',
+      items: [
+        {
+          label: 'Agregar', 
+          icon: 'pi pi-fw pi-plus'
+        },
+        {
+          label: 'Editar', 
+          icon: 'pi pi-fw pi-plus',
+          disabled: true
+        },
+        {
+          label: 'Eliminar', 
+          icon: 'pi pi-fw pi-plus',
+          disabled: true
+        }
+      ]
+  }
+];
+                    </code>
+                </pre>
+                <div class="text-center">
+                    <img src="../img/primeng/35.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Ya que es un dropdown se tiene que agregar el nodo <span class="pr">items[ ]</span> para agregar más objetos al nodo principal <br> <br>
+                    <span class="pr">label</span> definimos el titulo del objeto <br>
+                    <span class="pr">icon</span> se define el icono que puede llevar el objeto <br>
+                    <span class="pr">disabled</span> recibe un booleano para activar o desactivar el objeto 
+                </p>
+                <p class="p_sec">
+                    Resultados:
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/33.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/34.png" class="img-fluid rounded" alt="...">
+                </div>
+                
+                <!-- <p class="p_sec">
+                    Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
+                    <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
+                </p>
+                 -->
             </li>
         </ol>
         <a href="#" class="scrollup">Scroll</a>

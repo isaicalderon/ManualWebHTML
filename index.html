@@ -55,33 +55,45 @@
                 <!-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                 -->
+                </form> href=""
+                 --> 
             </div>
         </nav>
 
-        <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
+        <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc;  */">
             <ol class="ol1">
                 <li>
                     <h4 class="p_sec">
-                        <a href="templates/requerimientos.html" role="button">Requerimientos para poder trabajar.</a>
+                        <a data-toggle="collapse" href="#req"  role="button">Requerimientos para poder trabajar.</a>
                     </h4>
-                </li>
-                <li>
-                    <h4 class="p_sec">
-                        <a href="templates/wildfly.html" role="button">Wildfly v10.x</a>
-                    </h4>
-                    
-                </li>
-                <li>
-                    <h4 class="p_sec">
-                        <a href="templates/oracle.html" role="button">Oracle.</a>
-                    </h4>
-                    
+                    <div class="collapse" id="req">
+                        <ol class="ol2">
+                            <li>
+                                <h5 class="p_sec">
+                                    <a href="templates/requerimientos.html" role="button" >Eclipse</a>
+                                </h5>
+                            </li>
+                            <li>
+                                <h5 class="p_sec">
+                                    <a href="templates/wildfly.html" role="button" >WildFly v10.x</a>
+                                </h5>
+                            </li>
+                            <li>
+                                <h5 class="p_sec">
+                                    <a href="templates/oracle.html" role="button" >Oracle</a>
+                                </h5>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
                 <li>
                     <h4 class="p_sec">
                         <a href="templates/datos.html" role="button">Acceso a Datos.</a>
+                    </h4>
+                </li>
+                <li>
+                    <h4 class="p_sec">
+                        <a href="templates/serviciosweb.html" role="button">Servicios web (Angular/Aplicaciones Móviles).</a>
                     </h4>
                 </li>
                 <li>
@@ -94,8 +106,7 @@
                         </h5>
                         <h5 class="p_sec">
                             <a href="templates/appwebAngular.html" role="button" >PrimeNG for Angular</a>
-                        </h5>
-                        
+                        </h5>  
                     </div>
                 </li>
             </ol>
