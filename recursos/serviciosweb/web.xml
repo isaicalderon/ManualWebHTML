@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ServiciosAlumnos</display-name>
+	<context-param>
+	    <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+	    <param-value>true</param-value>
+  	</context-param>
+	
+	<context-param>
+		<param-name>javax.ws.rs.Application</param-name>
+		<param-value>com.matco.manual.servicios.AplicacionRest</param-value>
+	</context-param>
+	
+	
+	 <servlet>
+	    <servlet-name>log4j-init</servlet-name>
+	    <servlet-class>com.matco.manual.controller.Log4jInit</servlet-class>
+	    <init-param>
+	      <param-name>log4j-init-file</param-name>
+	      <param-value>log4j_csa.properties</param-value>
+	    </init-param>
+	    <load-on-startup>1</load-on-startup>
+  	</servlet>
+</web-app>

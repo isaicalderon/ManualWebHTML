@@ -85,10 +85,130 @@
                     <img src="../img/primeng/servicios/2.png" class="img-fluid rounded" alt="...">
                 </div>  
                 <p class="p_sec">
-                    
+                    Proyecto creado
                 </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/3.png" class="img-fluid rounded" alt="...">
+                </div> 
+                <p class="p_sec">
+                    Lo siguente que sigue es importar todas las librerias necesarias de la carpeta <a href="../recursos/serviciosweb/lib" target="_blank
+                    ">recursos/serviciosweb/lib</a> dentro de la carpeta <span class="blue">WebContent/WEB-INF/lib</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/4.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Dentro de esta carpeta de venir nuestra <span class="blue">persistencia.jar</span> y nuestra <span class="blue">entidad.jar</span> en caso de que venga aparte
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/5.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    En la carpeta <span class="blue">WEB-INF</span> creamos un nuevo archivo y lo llamamos <a href="../recursos/serviciosweb/web.xml" target="_blank">web.xml</a> abre el enlace y copia el codigo xml
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/6.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/7.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    En la linea 15 nos marca una advertencia, esto pasa porque nos falta el archivo <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>
+                </p>
+                <p class="p_sec">
+                    Lo creamos en la carpeta raiz del proyecto <span class="blue">ServiciosAlumnos/log4j_csa.properties</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/8.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Buscamos la seccion source, abrimos el enlace <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>, copiamos el contenido y lo guardamos.
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/9.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/10.png" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="p_sec">
+                    <div class="text-center">
+                        <img src="../img/primeng/servicios/mem1.jpg" class="img-fluid rounded" alt="...">
+                    </div>
+                </div> <p></p>
+                <p class="p_sec">
+                    Teniendo todo listo no queda más que empezar a programar.
+                </p>
+                <p class="p_sec">
+                    En la carpeta <span class="blue">Java Resources/src</span> creamos dos nuevos packages <br>
+                    <br><span class="blue">com.matco.manual.servicios</span> <br><span class="blue">com.matco.manual.controller</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/11.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    Dentro del paquete controller creamos una nueva clase Java y la llamamos <span class="blue">Log4jInit</span>, copiamos el codigo de abajo y lo pegamos en nuestra nueva clase
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/12.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    <span class="blue">Log4jInit.Java</span>
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+package com.matco.manual.controller;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.PropertyConfigurator;
+
+public class Log4jInit extends HttpServlet{
+
+    /**
+     * Gestor de consola de la aplicacion
+     */
+    private static final long serialVersionUID = -1267172923511440093L;
+
+    public void init() {
+        String file = getInitParameter("log4j-init-file");
+        if (file!=null) {
+            PropertyConfigurator.configure(file);
+        }
+    }
+    
+    public void doGet(HttpServletRequest req, HttpServletResponse res) {
+        
+    }
+}
+</code>
+                </pre>
+                <p class="p_sec">
+                    En el paquete servicios creamos una nueva clase llamada <span class="blue">Generic</span> esta clase es la que obtiene el archivo <a href="../recursos/serviciosweb/admintx_csa_aplicacion.properties">admintx_csa_aplicacion.properties</a> que contiene las propiedades para conectarse a la base de datos de Oracle.
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/14.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    <span class="blue">Generic.java</span>
+                </p>
+                <pre class="panel-code">
+<code>
+package com.matco.manual.servicios;
+
+public class Generic {
+    public static final String archivoConfiguracionServicio = "admintx_csa_aplicacion.properties";
+}
+</code>
+                </pre>
+
+
+                <!-- <div class="text-center">
+                    <img src="../img/primeng/servicios/13.png" class="img-fluid rounded" alt="...">
+                </div>
+                 -->
             </li>
- 
 
         </ol>
         <a href="#" class="scrollup">Scroll</a>
