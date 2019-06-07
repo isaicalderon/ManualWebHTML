@@ -8,7 +8,6 @@
         <meta name="generator" content="">
         <title>Manual de Aplicaciones WEB</title>
 
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
         <!-- Bootstrap core CSS -->
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,7 +15,6 @@
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -63,7 +61,9 @@
 
     <main role="main" class="container" style="margin-top: 5em;/*border: 1px solid #ccc; */">
         <ol class="ol2">
-            
+            <div class="alert alert-warning" role="alert">
+              <i class="fas fa-exclamation-circle"></i> Se requiere tener hecho el manual <a href="serviciosweb.html">Servicios web (Angular/Aplicaciones Móviles).</a> 
+            </div>
             <li>
                 <p>Instalacion de Visual Studio Code</p>
                 <p class="p_sec">
@@ -544,9 +544,70 @@ this.menuBar = [
                     <img src="../img/primeng/33.png" class="img-fluid rounded" alt="...">
                 </div>
                 <div class="text-center">
-                    <img src="../img/primeng/34.png" class="img-fluid rounded" alt="...">
+                    <img src="../img/primeng/34.png" class="img-fluid rounded" alt="..." >
                 </div>
-                
+                <p class="p_sec">
+                    Desactivamos Editar y Eliminar hasta que haya algún alumno disponible para editar o eliminar. Con esto terminas con el menuBar.
+                </p>
+                <p class="p_sec">
+                    Lo siguente ahora es agregar una tabla para mostrar a los Alumnos registrados
+                </p>
+                <p class="p_sec">
+                    Agregamos un margin-bottom para separar los componentes
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/36.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Abrimos <span class="blue">app.module.ts</span> y agregamos el siguente codigo:
+                    <br><br>
+                    <span class="blue">import {TableModule} from 'primeng/table';</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/37.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Recuerda que tambien debes agregar el componente en la seccion de "imports" como se muestra en la imagen
+                </p>
+                <p class="p_sec">
+                    Agregamos la tabla con el codigo de abajo
+                </p>
+                <pre class="panel-code">
+                    <code class="code-build">
+&lt;p-table id="table" #dt [columns]="cols" [value]="alumnos" [paginator]="true" [rows] = "10"
+    selectionMode="single" [(selection)] = "dataSelect" (onRowSelect)="onRowSelect()" (onRowUnselect)="onRowUnselect($event)"&gt;
+    &lt;ng-template pTemplate="caption"&gt;
+        &lt;div style="text-align: left"&gt;
+            &lt;button class="btn btn-dark" (click)="clearFilters(dt)"&gt;
+            &lt;i class="pi pi-trash" style="margin:0px 0px"&gt;&lt;/i&gt; Borrar Filtros&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template pTemplate="header" let-columns&gt;
+            &lt;tr&gt;
+                    &lt;th *ngFor="let col of columns" [pSortableColumn]="col.field"&gt;
+                            {{col.header}}
+                            &lt;p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"&gt;&lt;/p-sortIcon&gt;
+                    &lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th *ngFor="let col of columns" [ngSwitch]="col.field">
+                    &lt;input pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)"&gt;
+                        
+                &lt;/th&gt;
+            &lt;/tr&gt;
+    &lt;/ng-template&gt;
+    &lt;ng-template pTemplate="body" let-rowData let-alumno&gt;
+            &lt;tr [pSelectableRow]="rowData"&gt;
+                &lt;td&gt;{{alumno.matricula}}&lt;/td&gt;
+                &lt;td&gt;{{alumno.nombres}}&lt;/td&gt;
+                &lt;td&gt;{{alumno.apellidoPaterno}}&lt;/td&gt;
+                &lt;td&gt;{{alumno.apellidoMaterno}}&lt;/td&gt;
+            &lt;/tr&gt;
+    &lt;/ng-template&gt;
+&lt;/p-table&gt;
+                    </code>
+                </pre>
+
                 <!-- <p class="p_sec">
                     Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
                     <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
@@ -555,6 +616,7 @@ this.menuBar = [
             </li>
         </ol>
         <a href="#" class="scrollup">Scroll</a>
+        <a href="#" class="scrollDown">Scroll</a>
         <a href="../index.html" class="backPage"><img style="width: inherit;height: inherit;" src="../img/icon_back.png"></a>
         
     </main>
@@ -576,7 +638,11 @@ this.menuBar = [
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
             });
-            
+
+            $('.scrollDown').click(function(){
+                $("html, body").animate({ scrollTop: $(document).height() }, 600);
+                return false;
+            });            
         });
     </script>
 

@@ -64,7 +64,7 @@
         <ol class="ol2">
             <li>
                 <p>Entidades</p>
-                <p class="h6 p_sec">
+                <p class="p_sec">
                     Una entidad es la representación de una tabla en la base de datos. Cada instancia de esta, es una fila que se puede consultar, eliminar, modificar y agregar. Debido a que las entidades son objetos, estos pueden tener otros objetos dentro de ellas. Ejemplo: <br/>
                     <code>
                         public class Auto{ <br/>
@@ -111,7 +111,7 @@
                     <img src="../img/img39.jpg" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="h6 p_sec">
-                    Entramos a la carpeta del tutoria, luego en la carpeta SQL, entras al archivo body.sql copias y remplazas todo en CAPACITACION Body de SQLDeveloper
+                    Entramos a la carpeta del tutoria, luego en la carpeta SQL, entras al archivo <a href="../recursos/SQL/body.sql" target="_blank">body.sql</a>  copias y remplazas todo en CAPACITACION Body de SQLDeveloper
                 </p>
                 <div class="text-center">
                     <img src="../img/img40.jpg" class="img-fluid rounded" alt="...">
@@ -123,7 +123,7 @@
                     <img src="../img/img41.jpg" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="h6 p_sec">
-                    Luego entramos al nivel de CAPACITACION y copiamos del archivo capacitacion.sql a CAPACITACION de SQLDeveloper
+                    Luego entramos al nivel de CAPACITACION y copiamos del archivo <a href="../recursos/SQL/capacitacion.sql" target="_blank">capacitacion.sql</a>  a CAPACITACION de SQLDeveloper
                 </p>
                 <div class="text-center">
                     <img src="../img/img42.jpg" class="img-fluid rounded" alt="...">
@@ -139,7 +139,7 @@
                 <div class="text-center">
                     <img src="../img/img34.jpg" class="img-fluid rounded" alt="...">
                 </div>
-                <p class="h6 p_sec">Creamos los siguientes paquetes dentro de source: com.matco.manual.entity</p>
+                <p class="h6 p_sec">Creamos los siguientes paquetes dentro de source: <span class="blue">com.matco.manual.entity</span></p>
                 <div class="text-center">
                     <img src="../img/img35.jpg" class="img-fluid rounded" alt="...">
                 </div>
@@ -237,8 +237,8 @@
                     <img src="../img/img51.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="h6 p_sec">
-                    Nos ubicamos en la carpeta del proyecto y copiamos los JAR mostrados en la carpeta lib que creamos.
-                </p>
+                    Nos ubicamos en la carpeta del proyecto y copiamos los JAR mostrados en la carpeta lib que creamos, de la carpeta <a href="../recursos/Librerias" target="_blank">Librerias</a>
+.                </p>
                 <div class="text-center">
                     <img src="../img/img50.png" class="img-fluid rounded" alt="...">
                 </div>
@@ -258,7 +258,7 @@
                 <p class="h6 p_sec">
                     En src debemos crear los siguientes paquetes:<br>
                     <span class="blue">com.matco.manual.dao</span><br>
-                    <span class="blue">com.matco.manual.dao.jdbc</span><br>
+                    <span class="blue">com.matco.manual.jdbc</span><br>
                     <span class="blue">com.matco.manual.facade</span><br>
                 </p>
                 <p class="h6 p_sec">
@@ -290,7 +290,7 @@
                 <div class="collapse" id="collapse3">
                     <p class="h6 panel-code">
                         <code class="code-build">
-                            <span class='pr'>package</span> com.matco.manual.dao; <br/>  <br/> <span class='pr'>import</span> com.matco.manual.entity.Alumno; <br/>  <br/> <span class='pr'>public</span> <span class='pr'><span class='pr'>int</span>erface</span> AlumnoDao <span class='pr'>extends</span> GenericDao<Alumno, String> { <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class="blue"> /** <br/>  <span class='tab'></span>  *  <br/>  <span class='tab'></span>  * Agrega un alumno <br/>  <span class='tab'></span>  * <span class="par-com">@param</span> Alumno <br/>  <span class='tab'></span>  * <span class="par-com">@throws</span> Exception cuando el metodo no esta implementado <br/>  <span class='tab'></span>  *  <br/>  <span class='tab'></span>  **/</span> <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'>int</span> funAgregarAlumno(Alumno instancia)  <span class='tab'></span> <span class='pr'>throws</span> Exception; <br/> }
+                            <span class='pr'>package</span> com.matco.manual.dao; <br/>  <br/> <span class='pr'>import</span> com.matco.manual.entity.Alumno; <br/>  <br/> <span class='pr'>public</span> <span class='pr'><span class='pr'>int</span>erface</span> AlumnoDao <span class='pr'>extends</span> GenericDao </code>&lt;Alumno, String&gt; { <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class="blue"> /** <br/>  <span class='tab'></span>  *  <br/>  <span class='tab'></span>  * Agrega un alumno <br/>  <span class='tab'></span>  * <span class="par-com">@param</span> Alumno <br/>  <span class='tab'></span>  * <span class="par-com">@throws</span> Exception cuando el metodo no esta implementado <br/>  <span class='tab'></span>  *  <br/>  <span class='tab'></span>  **/</span> <br/>  <span class='tab'></span>  <br/>  <span class='tab'></span> <span class='pr'>int</span> funAgregarAlumno(Alumno instancia)  <span class='tab'></span> <span class='pr'>throws</span> Exception; <br/> }
                         </code>
                     </p>
                 </div>
@@ -519,6 +519,7 @@
                             <span class='pr'>import</span> java.util.List;<br/><br/><span class='pr'>import</span> org.apache.log4j.PropertyConfigurator;<br/><br/><span class='pr'>import</span> com.matco.manual.entity.Alumno;<br/><span class='pr'>import</span> com.matco.manual.facade.AlumnoFacade;<br/><br/><span class='pr'>public</span> <span class='pr'>class</span> Main {<br/> <span class='tab'></span> <span class='pr'>private</span> <span class='pr'>static</span> <span class='pr'>final</span> String log4j = "log4j_csa.properties<span class='var'>"</span>;<br/><br/> <span class='tab'></span> <span class='pr'>public</span> <span class='pr'>static</span> <span class='pr'>void</span> main(String[] args) <span class='pr'>throws</span> Exception {<br/> <span class='tab'></span>  <span class='tab'></span> PropertyConfigurator.configure(log4j);<br/> <span class='tab'></span>  <span class='tab'></span> String archivoConfiguracion = "adm<span class='pr'>int</span>x_csa_aplicacion.properties<span class='var'>"</span>;<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> //Código para listarlos todos<br/> <span class='tab'></span>  <span class='tab'></span> AlumnoFacade alumnoFacade = <span class='pr'>new</span> AlumnoFacade(archivoConfiguracion);<br/> <span class='tab'></span>  <span class='tab'></span> List&lt;Alumno&gt; alumnos = alumnoFacade.obtenerTodosAlumnos();<br/> <span class='tab'></span>  <span class='tab'></span> <span class='pr'>int</span> contador = 0;<br/> <span class='tab'></span>  <span class='tab'></span> <span class='pr'>for</span> (Alumno alumnoo : alumnos) {<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> contador++;<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln(alumnoo.getMatricula() + " - " + alumnoo.getNombres() + " " + alumnoo.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumnoo.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> }<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln("Hay "+contador+" alumnos");<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> //Código para agregar un alumno<br/> <span class='tab'></span>  <span class='tab'></span> Alumno alumno = <span class='pr'>new</span> Alumno();<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setNombres("Estemen");<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setApellidoPaterno("No tiene");<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setApellidoMaterno("Si tiene");<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setCreadoPor("DESARROLLO");<br/> <span class='tab'></span>  <span class='tab'></span> <span class='pr'>int</span> matricula = alumnoFacade.guardarAlumno(alumno);<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln("Se guardó el alumno con la matricula: "+matricula);<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> alumnos = alumnoFacade.obtenerTodosAlumnos();<br/> <span class='tab'></span>  <span class='tab'></span> contador = 0;<br/> <span class='tab'></span>  <span class='tab'></span> <span class='pr'>for</span> (Alumno alumnoo : alumnos) {<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> contador++;<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln(alumnoo.getMatricula() + " - " + alumnoo.getNombres() + " " + alumnoo.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumnoo.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> }<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln("Hay "+contador+" alumnos");<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> //Código para consultar un alumno<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> alumno = alumnoFacade.obtenerAlumnoPorMatricula(matricula);<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln(alumno.getMatricula() + " - " + alumno.getNombres() + " " + alumno.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumno.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> //Código para modificar un alumno<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setNombres("Ahorano");<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setApellidoPaterno("parfavar");<br/> <span class='tab'></span>  <span class='tab'></span> alumno.setApellidoMaterno("noooo");<br/> <span class='tab'></span>  <span class='tab'></span> alumnoFacade.modificarAlumno(alumno);<br/> <span class='tab'></span>  <span class='tab'></span> alumno = alumnoFacade.obtenerAlumnoPorMatricula(matricula);<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln(alumno.getMatricula() + " - " + alumno.getNombres() + " " + alumno.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumno.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> <br/> <span class='tab'></span>  <span class='tab'></span> //Código para eliminar un alumno<br/> <span class='tab'></span>  <span class='tab'></span> alumnoFacade.eliminarAlumno(alumno);<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln("Se ha eliminado a "+alumno.getMatricula() + " - " + alumno.getNombres() + " " + alumno.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumno.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> alumnos = alumnoFacade.obtenerTodosAlumnos();<br/> <span class='tab'></span>  <span class='tab'></span> contador = 0;<br/> <span class='tab'></span>  <span class='tab'></span> <span class='pr'>for</span> (Alumno alumnoo : alumnos) {<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> contador++;<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln(alumnoo.getMatricula() + " - " + alumnoo.getNombres() + " " + alumnoo.getApellidoPaterno()<br/> <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span>  <span class='tab'></span> + " " + <span class='var'>alumnoo.getApellidoMaterno())</span>;<br/> <span class='tab'></span>  <span class='tab'></span> }<br/> <span class='tab'></span>  <span class='tab'></span> System.out.pr<span class='pr'>int</span>ln("Hay "+contador+" alumnos");<br/> <span class='tab'></span> }<br/><br/>}
                         </code>
                     </p>
+                    
                 </div>
                 <p class="p_sec">
                     Nos ubicamos en la carpeta del Manual → Conexion a base de Datos. y copiamos el archivo <span class="blue">admintx_csa_aplicacion.properties</span> y <span class="blue">log4j_csa.propierties</span> en PersistenciaManual en forma raiz
@@ -526,6 +527,9 @@
                 <div class="text-center">
                     <img src="../img/img66.png" class="img-fluid rounded" alt="...">
                 </div>
+                <p class="p_sec">
+                    Run.
+                </p>
             </li>
         </ol>
         <a href="#" class="scrollup">Scroll</a>

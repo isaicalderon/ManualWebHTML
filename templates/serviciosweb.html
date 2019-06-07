@@ -29,7 +29,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="../index.html">Manual Aplicaciones Web</a>
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-home"></i> Manual Aplicaciones Web / ServiciosWeb</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" 
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@
            <li>
                 <p>Servicios web (Angular/Aplicaciones Móviles).</p>
                 <p class="p_sec">
-                    Si tu proyecto necesita de <a href="https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos" target="_blank">servicios REST API</a>, y se de adapta a la <a href="datos.html#persistencia" target="_blank">persistencia</a> que creamos anteriormente.
+                    Si tu proyecto necesita de <a href="https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos" target="_blank">servicios REST API</a>, y se adapta a la <a href="datos.html#persistencia" target="_blank">persistencia</a> que creamos anteriormente.
                 </p>
                 <p class="p_sec">
                     Empezaremos abriendo Eclipse y crearemos un nuevo proyecto web. <br>
@@ -91,7 +91,7 @@
                     <img src="../img/primeng/servicios/3.png" class="img-fluid rounded" alt="...">
                 </div> 
                 <p class="p_sec">
-                    Lo siguente que sigue es importar todas las librerias necesarias de la carpeta <a href="../recursos/serviciosweb/lib" target="_blank
+                    Lo siguiente que sigue es importar todas las librerías necesarias de la carpeta <a href="../recursos/serviciosweb/lib" target="_blank
                     ">recursos/serviciosweb/lib</a> dentro de la carpeta <span class="blue">WebContent/WEB-INF/lib</span>
                 </p>
                 <div class="text-center">
@@ -104,7 +104,7 @@
                     <img src="../img/primeng/servicios/5.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    En la carpeta <span class="blue">WEB-INF</span> creamos un nuevo archivo y lo llamamos <a href="../recursos/serviciosweb/web.xml" target="_blank">web.xml</a> abre el enlace y copia el codigo xml
+                    En la carpeta <span class="blue">WEB-INF</span> creamos un nuevo archivo y lo llamamos <a href="../recursos/serviciosweb/web.xml" target="_blank">web.xml</a> abre el enlace y copia el código xml
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/servicios/6.png" class="img-fluid rounded" alt="...">
@@ -113,16 +113,16 @@
                     <img src="../img/primeng/servicios/7.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    En la linea 15 nos marca una advertencia, esto pasa porque nos falta el archivo <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>
+                    En la linea 15 nos marca una advertencia, esto pasa porque falta el archivo <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>
                 </p>
                 <p class="p_sec">
-                    Lo creamos en la carpeta raiz del proyecto <span class="blue">ServiciosAlumnos/log4j_csa.properties</span>
+                    Lo creamos en la carpeta raíz del proyecto <span class="blue">ServiciosAlumnos/log4j_csa.properties</span>
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/servicios/8.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    Buscamos la seccion source, abrimos el enlace <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>, copiamos el contenido y lo guardamos.
+                    Buscamos la sección source, abrimos el enlace <a href="../recursos/serviciosweb/log4j_csa.properties" target="_blank">log4j_csa.properties</a>, copiamos el contenido y lo guardamos.
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/servicios/9.png" class="img-fluid rounded" alt="...">
@@ -146,7 +146,7 @@
                     <img src="../img/primeng/servicios/11.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    Dentro del paquete controller creamos una nueva clase Java y la llamamos <span class="blue">Log4jInit</span>, copiamos el codigo de abajo y lo pegamos en nuestra nueva clase
+                    Dentro del paquete controller creamos una nueva clase Java y la llamamos <span class="blue">Log4jInit</span>, copiamos el  de abajo y lo pegamos en nuestra nueva clase
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/servicios/12.png" class="img-fluid rounded" alt="...">
@@ -167,7 +167,7 @@ import org.apache.log4j.PropertyConfigurator;
 public class Log4jInit extends HttpServlet{
 
     /**
-     * Gestor de consola de la aplicacion
+     * Gestor de consola de la aplicación
      */
     private static final long serialVersionUID = -1267172923511440093L;
 
@@ -185,7 +185,7 @@ public class Log4jInit extends HttpServlet{
 </code>
                 </pre>
                 <p class="p_sec">
-                    En el paquete servicios creamos una nueva clase llamada <span class="blue">Generic</span> esta clase es la que obtiene el archivo <a href="../recursos/serviciosweb/admintx_csa_aplicacion.properties">admintx_csa_aplicacion.properties</a> que contiene las propiedades para conectarse a la base de datos de Oracle.
+                    En el paquete servicios creamos una nueva clase llamada <span class="blue">Generic</span> esta clase es la que obtiene el archivo <a href="../recursos/serviciosweb/admintx_csa_aplicacion.properties" target="_blank">admintx_csa_aplicacion.properties</a> que contiene las propiedades para conectarse a la base de datos de Oracle.
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/servicios/14.png" class="img-fluid rounded" alt="...">
@@ -202,8 +202,293 @@ public class Generic {
 }
 </code>
                 </pre>
+                <p class="p_sec">
+                    Creamos otra nueva clase llamada <span class="blue">AplicacionRest</span> esta clase inicializa el path del URL de nuestro servicio Rest.
+                    Por ejemplo por el momento el url estaría así <span class="blue">localhost:8085/ServiciosAlumnos/servicios/</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/15.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    <span class="blue">AplicacionRest.java</span>
+                </p>
+<pre class="panel-code">
+<code>
+package com.matco.manual.servicios;
 
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
 
+@ApplicationPath("/servicios")
+public class AplicacionRest extends Application{
+    // Queda vacia
+}
+</code>
+</pre>
+                <p class="p_sec">
+                    <span class="blue">localhost:8085</span> Dirección del servicio <br>
+                    <span class="blue">ServicioAlumnos</span> Nombre del proyecto que incluye el servicio <br>
+                    <span class="blue">servicios</span> Nombre del servicio <br>
+                    <span class="pr">@ApplicationPath</span> variable para establecer el nombre de tu servicio <br>
+                </p>
+                <p class="p_sec">
+                    Creamos otra nueva clase llamada <span class="blue">AlumnoServicios</span> esta clase tendrá todos nuestros servicios y utilizara la persistencia creada
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/16.png" class="img-fluid rounded" alt="...">
+                </div>
+                <p class="p_sec">
+                    <span class="blue">AlumnoServicios.java</span>
+                </p>
+<pre class="panel-code">
+<code class="code-build">
+package com.matco.manual.servicios;
+
+import java.util.List;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.*;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.matco.manual.facade.AlumnoFacade;
+import com.matco.manual.entity.Alumno;
+
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement(name = "alumnoServicio")
+@Path("alumnoServicio")
+public class AlumnoServicios extends Generic{
+    
+    AlumnoFacade alumnoFacade = new AlumnoFacade(archivoConfiguracionServicio);
+    
+    @POST
+    @Path("guardarAlumno")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Alumno guardarAlumno(Alumno tmp) throws Exception {
+        int mat = alumnoFacade.guardarAlumno(tmp);
+        System.out.println("Hasta aqui todo bien");
+        return alumnoFacade.obtenerAlumnoPorMatricula(mat);
+    }
+    
+    @PUT
+    @Path("modificarAlumno")
+    public void modificarAlumno(Alumno tmp) throws Exception {
+        alumnoFacade.modificarAlumno(tmp);
+    }
+    
+    @DELETE
+    @Path("eliminarAlumno")
+    public void eliminarAlumno(@QueryParam("matricula") int matricula) throws Exception {
+        Alumno tmp = new Alumno();
+        tmp.setMatricula(matricula);
+        alumnoFacade.eliminarAlumno(tmp);
+    }
+    
+    @GET
+    @Path("obtenerTodosAlumnos")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List &lt;Alumno&gt; obtenerTodosAlumnos() throws Exception {
+        List&lt;Alumno&gt; res = alumnoFacade.obtenerTodosAlumnos();
+        return res;
+    }
+}   
+</code>
+</pre>      
+            <p class="p_sec">
+                Copiando la clase no debería marcarte error, si eso pasa debes tener mal una importación. <br> Simbología: <br>
+                <br>
+                <span class="pr">@XmlRootElement</span> Nombre del servicio raíz en el xml <br>
+                <span class="pr">@Path("")</span> Nombre del servicio para el URL <br>
+                <span class="pr">@POST</span> Servicio REST POST, indica que esta funcion es para insertar datos <br>
+                <span class="pr">@GET</span> Servicio REST GET, indica que esta funcion es para obtener datos <br>
+                <span class="pr">@PUT</span> Servicio REST PUT, indica que esta funcion es para hacer update (pude haber retorno) <br>
+                <span class="pr">@DELETE</span> Servicio REST PUT, indica que esta funcion es para eliminar objetos <br>
+                <span class="pr">@Produces(MediaType.APPLICATION_JSON)</span> Parámetro para indicar que vá a retornar la funcion, en este caso retornaría un JSON <br>
+                <span class="pr">@QueryParam("")</span> Sirve para obtener un parámetro con un nombre definido
+            </p>
+            <p class="p_sec">
+                Ejecutamos el proyecto con el servidor de WildFly
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/17.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Next
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/18.png" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/19.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Finish.
+            </p>
+            <p class="p_sec">
+                Hacemos una petición al servicio get all <a href="http://localhost:8085/ServiciosAlumno/servicios/alumnoServicio/obtenerTodosAlumnos" target="_blank">http://localhost:8085/ServiciosAlumno/servicios/alumnoServicio/obtenerTodosAlumnos</a>
+            </p>
+            <p class="p_sec">
+                Debería mostrarte un resultado de tipo Json en el navegador
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/20.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Vamos a probar los demás servicios para comprobar que funcionan correctamente, para eso abrimos un programa llamado <a href="https://www.getpostman.com/" target="_blank">Postman</a> lo puedes descargar e instalar, o instalarlo como aplicación de chrome (ese es mi caso).
+            </p>
+            <p class="p_sec">
+                Seleccionamos el método GET y en el url pegamos el servicio que probamos en el navegador
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/22.png" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/21.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Damos clic en Send y debería mostrarnos un Json con la consulta hecha.
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/23.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Ahora probaremos el servicio <span class="blue">guardarAlumno</span>
+            </p>
+            <p class="p_sec">
+                Abrimos una nueva pestaña, seleccionamos el método POST y pegamos en el URL el servicio <span class="blue">guardarAlumno</span> <br>
+                <span class="blue">http://localhost:8085/ServiciosAlumno/servicios/alumnoServicio/guardarAlumno</span>
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/24.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Este método nos pide un objeto Json y para mandarlos tenemos que definir en el Header del envió el método <span class="blue">Content-Type:application/json</span> sin este atributo nos marcaría error al momento de hacer la petición.
+            </p>
+            <p class="p_sec">
+                Hacemos clic en Header y añadimos la nueva key
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/25.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Agregamos el json en la pestaña Body
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/26.png" class="img-fluid rounded" alt="...">
+            </div>
+            <pre class="panel-code">
+                {
+                    "nombres": "Usuario",
+                    "apellidoPaterno": "De",
+                    "apellidoMaterno": "Prueba",
+                    "creadoPor": "user"
+                }
+            </pre>
+            <p class="p_sec">
+                Hacemos la petición
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/27.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                El programa debería responderte con un Json que seria el resultado de la petición
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/28.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                El status debería ser <span class="blue">200 OK</span>
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/29.png" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="p_sec">
+                El servicio funciona! 
+                <div class="text-center">
+                    <img src="../img/primeng/servicios/tenor.gif" class="img-fluid rounded" alt="...">
+                </div>
+            </div>
+            <p></p>
+            <p class="p_sec">
+                Probamos el servicio <span class="blue">modificarAlumno</span>
+            </p>
+
+            <p class="p_sec">
+                Hacemos los mismos pasos que el servicio anterior, solo que esta vez seleccionamos el método PUT
+                <br>
+                URL: <span class="blue">http://localhost:8085/ServiciosAlumno/servicios/alumnoServicio/modificarAlumno</span>
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/30.png" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/31.png" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/32.png" class="img-fluid rounded" alt="...">
+            </div>
+            <pre class="panel-code">
+                {
+                    "matricula": 2,
+                    "nombres": "UsuarioModifcado",
+                    "apellidoPaterno": "De",
+                    "apellidoMaterno": "Prueba_V1.0",
+                    "activo": null,
+                    "creadoPor": "root",
+                    "modificadoPor": "toor",
+                    "fechaHoraCreacion": "2019-06-05",
+                    "fechaHoraModificacion": "2019-06-06"
+                }
+            </pre>
+            <p class="p_sec">
+                Hacemos la petición 
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/33.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                No regreso nada pero podemos ver como el status es <span class="blue">204 No Content</span> este estatus significa que la petición se hizo correctamente pero no retorna ningún valor, ¿como nos damos cuenta de que si se hizo el cambio?, hacemos una petición GET 
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/34.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Como vez el servicio funciono correctamente!
+            </p>
+            <p class="p_sec">
+                Por ultimo solo nos queda probar el servicio <span class="blue">eliminarAlumno</span> hacemos los mismos pasos pero seleccionamos el método DELETE
+                <br>
+                Este servicio nos pide como parámetro una matricula se define agregando el símbolo "?" despues del nombre del servicio, luego el nombre del atributo más un "=" y despues el valor  <br>
+                <span class="blue">eliminarAlumno?matricula=2</span> <br>
+                URL: <span class="blue">http://localhost:8085/ServiciosAlumno/servicios/alumnoServicio/eliminarAlumno?matricula=2</span> <br>
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/35.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Hacemos la petición. <br>
+                Debería responder con un status <span class="blue">204 Not Content</span> y todo estará perfecto
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/36.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Hacemos una consulta para confirmar el que servicio funciono
+            </p>
+            <div class="text-center">
+                <img src="../img/primeng/servicios/37.png" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Como vez el servicio funciono correctamente!
+            </p>
+            <div class="p_sec text-center">
+                <img src="../img/primeng/servicios/mem2.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <p class="p_sec">
+                Puedes continuar con el Manual <a href="appwebAngular.html">PrimeNG for Angular</a>. Fin.
+            </p>
                 <!-- <div class="text-center">
                     <img src="../img/primeng/servicios/13.png" class="img-fluid rounded" alt="...">
                 </div>
@@ -212,6 +497,7 @@ public class Generic {
 
         </ol>
         <a href="#" class="scrollup">Scroll</a>
+        <a href="#" class="scrollDown">Scroll</a>
         <a href="../index.html" class="backPage"><img style="width: inherit;height: inherit;" src="../img/icon_back.png"></a>
     </main>
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
@@ -232,7 +518,11 @@ public class Generic {
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
             });
-            
+
+            $('.scrollDown').click(function(){
+                $("html, body").animate({ scrollTop: $(document).height() }, 600);
+                return false;
+            }); 
         });
     </script>
     </body>
