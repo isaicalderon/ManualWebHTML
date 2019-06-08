@@ -607,7 +607,95 @@ this.menuBar = [
 &lt;/p-table&gt;
                     </code>
                 </pre>
+                <p class="p_sec">
+                    Debería verse así <br>
+                </p> 
+                <div class="text-center">
+                    <img src="../img/primeng/38.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Para agregar columnas a nuestra tabla se agrega el atributo <span class="blue">[columns]="cols"</span> en p-table y definimos el objeto en
+                    <span class="blue">app.component.ts</span>
+                </p>
+                <p class="p_sec">
+                    Abrimos <span class="blue">app.component.ts</span> <br>
+                    Creamo una variable arreglo llamada cols de tipo any y la definimos
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/39.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Definimos a <span class="blue">cols</span> agregando este objeto dentro de la funcion ngOnInit
+                </p>
+                <pre class="panel-code">
+this.cols = [
+    { field: 'matricula', header: 'Matricula' },
+    { field: 'nombres', header: 'Nombre' },
+    { field: 'apellidoPaterno', header: 'Apellido Paterno' },
+    { field: 'apellidoMaterno', header: 'Apellido Materno' }
+];
+                </pre>
+                <div class="text-center">
+                    <img src="../img/primeng/40.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Vemos los cambios
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/41.png" class="img-fluid rounded" alt="..." >
+                </div>
 
+                <p class="p_sec">
+                    Los campos se agregan gracias a Angular con el codigo <span class="blue">*ngFor = "let col of columns"</span>, con este codigo se hace un foreach iterando el objeto cols <br>
+                    &lt;th *ngFor="let col of columns" [pSortableColumn]="col.field">&lt;/th> <br>
+                    <span class="tab"></span>{{col.header}} <-- esto es Angular
+                </p>
+                <p class="p_sec">
+                    Ahora ya solo queda mostrar los datos de la tabla para eso vamos a utilizar los servicios que hicimos del manual <a href="serviciosweb.html" target="_blank">Servicios web (Angular/Aplicaciones Móviles).</a> Abrimos Eclipse y cargamos el proyecto.
+                    <br>
+                    Mientras Eclipse abre hagamos un paso muy importante para evitar un error llamado <a href="https://developer.mozilla.org/es/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin" target="_blank">CORS header</a> sin este paso los datos podrían no mostrarse
+                </p>
+                <p class="p_sec">
+                    Creamos un nuevo archivo en la carpeta raiz del proyecto llamado <span class="blue">proxy.conf.json</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/42.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Lo abrimos y agregamos el código de abajo 
+                </p>
+                <pre class="panel-code">
+{   
+    "/ServiciosAlumno/servicios/*": {
+        "target": "http://localhost:8085",
+        "secure": false,
+        "changeOrigin":true
+    }
+}
+                </pre>
+                <div class="text-center">
+                    <img src="../img/primeng/43.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    <span class="pr">"/ServiciosAlumno/servicios/*"</span> en este nodo tienes que poner el path de tus servicios web, en este caso los
+                    servicios estan despues de /servicios/ y se agrega un asterisco para hacer referencia a todos los servicios <br>
+                    <span class="pr">"target"</span> es la direccion del servidor <br>
+                    <span class="pr">"secure"</span> false
+                </p>
+                <p class="p_sec">
+                    El ultimo paso es abrir el archivo <span class="blue">package.json</span> <br>
+                    Buscamos el nodo "start" y lo remplazamos por este código: <span class="name-var">"start": "ng serve --proxy-config proxy.conf.json",</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/44.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Ahora solo falta ejecutar el servidor siempre con el comando <span class="blue">npm start</span> para que ejecute el proxy.conf <br>
+                    Con esto queda listo para ejecutar los servicios.
+                </p>
+                <p class="p_sec">
+                    
+                </p>
                 <!-- <p class="p_sec">
                     Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
                     <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
