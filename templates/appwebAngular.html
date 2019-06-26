@@ -708,7 +708,190 @@ this.cols = [
                 <p class="p_sec">
                     Hora de configurar los servicios para hacerlos mostrar
                 </p>
-                <!-- <p class="p_sec">
+                <p class="p_sec">
+                    En la carpeta <span class="blue">app</span> creamos una nueva carpeta llamada entity, esta carpeta contendra las entidades a utilizar
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/47.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Dentro de la carpeta entity creamos un nuevo archivo TypeScript llamado <span class="blue">alumnos.entity.ts</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/48.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creamos una interface llamada Alumno
+                </p>
+<pre class="panel-code">
+    <code>
+export interface Alumno{
+    matricula?: number;
+    nombres;
+    apellidoPaterno;
+    apellidoMaterno;
+    creadoPor;
+    modificadoPor;
+}
+    </code>
+</pre>
+                <p class="p_sec">
+                    Las variables estan creadas pero no definimos su tipo de dato, excepto la variable matricula la definimos como tipo number y agregamos "?" <br/>
+                    significa que el valor puede o no puede estar
+                </p>
+                <p class="p_sec">
+                    Ahora nuevamente en la carpeta app creamos un nuevo folder llamado <span class="blue">services</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/49.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creamos un nuevo archivo TypeScript llamado <span class="blue">alumno.services.ts</span> y creamos una nueva clase <span class="blue">AlumnoServicios</span>
+                </p>
+<pre class="panel-code">
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class AlumnoService{
+    
+}
+</pre>
+                <p class="p_sec">
+                    Importamos unos nuevos componentes <br/>
+                    <span class="name-var">
+                        import { HttpClient } from '@angular/common/http';
+                    </span> Importamos los componentes para poder usar servicios REST
+                    <br/>
+                    <span class="name-var">
+                        import { Alumno } from '../entity/alumnos.entity';
+                    </span> Importamos la entidad Alumno para poder crear nuevos objetos
+                    
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/50.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creamos un constructor y dentro una nueva variable de tipo <span class="blue">HttpClient</span> <br/>
+                    <span class="name-var">constructor(private http: HttpClient){}</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/51.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creamos una variable para el url del servicio <span class="blue">obtenerTodos</span>
+                    <br/>
+                    <span class="name-var">
+                        obtenerTodos = "/ServiciosAlumno/servicios/alumnoServicio/obtenerTodosAlumnos?";
+                    </span>
+                </p>
+                <p class="p_sec">
+                    Agregaremos esta funcion para ordenar datos
+                </p>
+<pre class="panel-code">
+sortJSON(data, key, orden) {
+    return data.sort(function (a, b) {
+        var x = a[key],
+        y = b[key];
+
+        if (orden === 'asc') {
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        }
+
+        if (orden === 'desc') {
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+        }
+    });
+}
+</pre>
+                <p class="p_sec">
+                    Resultado hasta ahora
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/52.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creamos nuestra funcion donde obtendremos todos los datos de la tabla por medio del servcio GET
+                </p>
+<pre class="panel-code">
+getAllAlumnos(){
+  return this.http.get(this.obtenerTodos)
+        .toPromise()
+        .then(res => &lt;Alumno[]&gt; (res as any)) 
+        .then(data => {return this.sortJSON(data, "fechaHoraCreacion", "desc");} ) 
+}
+</pre>
+                <p class="p_sec">
+                    En esta funcion utilizamos la variable <span class="blue">http</span> para llamar a la funcion <span class="pr">get</span> y le enviamos como parametro 
+                    el url de nuestro servicio 
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/53.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Con esto tenemos nuestro primer servicio terminado, es hora de probarlo
+                </p>
+                <p class="p_sec">
+                    Abrimos el archivo <span class="blue">app.modules.ts</span>, buscamos el nodo <span class="pr">providers</span> y agregamos el nombre 
+                    de la clase de nuestro servicio para indicar que obtendremos datos y no nos de error
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/54.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Importamos la clase para corregir el error <br/>
+                    <span class="name-var">
+                        import { AlumnoService } from './services/alumno.services';
+                    </span> <br/> <br/>
+                    Tambien importamos la clase <span class="blue">HttpClientModule</span> <br/>
+                    <span class="name-var">
+                        import { HttpClientModule } from '@angular/common/http'; 
+                    </span>
+
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/55.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Abrimos el archivo <span class="blue">app.component.ts</span>. Agregamos un constructor con una variable de tipo AlumnoService (importamos la clase) 
+                </p>
+<pre class="panel-code">
+constructor(private alumnoService: AlumnoService) {}
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/56.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Crearemos una nueva variable de tipo Arreglo <span class="com">Alumno</span>, aqui se guardaran los resultados de la consulta y los mostrara la tabla <br/>
+                    <span class="name-var">
+                        alumnos: Alumno[];
+                    </span>
+                </p>
+                <p class="p_sec">
+                    En la funcion <span class="com">ngOnInit()</span> usamos la variable <span class="name-var">alumnoService</span> para llamar a la funcion <span class="blue">getAllAlumno()</span>
+                </p>
+<pre class="panel-code">
+this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
+</pre>
+                <p class="p_sec">
+                    usamos <span class="pr">.then</span> y enviamos la variable alumnos para guardar los datos
+                </p>
+
+                <div class="text-center">
+                    <img src="../img/primeng/57.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Observamos los resultados
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/58.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Con esto ya tenemos la tabla lista y visualizando los datos
+                </p>
+                <p class="p_sec">
+                    Lo siguente es crear el Dialog para agregar un nuevo Alumno
+                </p>
+                <!-- <p class="p_sec"> Arreglar algunos errores de importacion con el providers y con el enlace del servicio ServiosAlumnoS
                     Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
                     <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
                 </p>
