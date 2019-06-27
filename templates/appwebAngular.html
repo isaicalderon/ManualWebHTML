@@ -891,6 +891,107 @@ this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
                 <p class="p_sec">
                     Lo siguente es crear el Dialog para agregar un nuevo Alumno
                 </p>
+                <p class="p_sec">
+                    Abrimos <span class="blue">app.module.ts</span>, importamos una nueva libreria <br>
+                    <span class="name-var">
+                        import {DialogModule} from 'primeng/dialog';
+                    </span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/59.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Abrimos <span class="blue">app.component.html</span> y agregamos nuestro dialog:
+                </p>
+<pre class="panel-code">
+&lt;p-dialog id="altaAlumno" header="Alta Alumno" [(visible)]="displayAgregar" [modal]="true" [responsive]="true"
+    [style]="{width: '450px', height: '230px', background: '#3f3f3f', top: '0px'}" [minY]="50"&gt;
+    &lt;div style="padding: 1%;"&gt;
+        &lt;form&gt;
+            &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
+                &lt;label for="nombres" class="col-sm-4 col-form-label"&gt;Nombre: &lt;/label&gt;
+                &lt;div class="col-sm-8"&gt;
+                    &lt;input id="nombres" type="text" class="input-dialog" id="nombres"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
+                &lt;label for="app" class="col-sm-4 col-form-label"&gt;Apellido Paterno:&lt;/label&gt;
+                &lt;div class="col-sm-8"&gt;
+                    &lt;input type="text" class="input-dialog" id="app" placeholder=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row" style="margin-bottom:20px;"&gt;
+                &lt;label for="apm" class="col-sm-4 col-form-label"&gt;Apellido Materno:&lt;/label&gt;
+                &lt;div class="col-sm-8"&gt;
+                    &lt;input type="text" class="input-dialog" id="apm" placeholder=""&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p style="text-align: center"&gt;
+                &lt;button id="btnAgregar" class="btn btn-dark" (click)="funAgregarAlumno()"&gt;
+                        &lt;span id="spanSpinner" class="spinner-border spinner-border-sm dp-none" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span id="spanText"&gt;Registrar&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button class="btn btn-dark" (click) = "showDialogAgregar()">Cancelar&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/p-dialog&gt;  
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/60.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    <span class="pr">[(visible)]="displayAgregar"</span> atributo para indicar si el componente es visible o invisible, en este caso se mostrara dependiendo al estado de la variable booleana displayAgregar, mas adelante la programamos <br>
+                    <span class="pr">header</span> indica el nombre del dialog <br>
+                </p>
+                <p class="p_sec">
+                    Ahora hay que crear la variable <span class="name-var">displayAgregar</span> 
+                    en <span class="blue">app.component.ts</span> para que el dialog aparesca y desaparesca
+                </p>
+                <p class="p_sec">
+                    Creamos una funcion para cambiar el valor de la variable
+                </p>
+<pre class="panel-code">
+showDialogAgregar(){
+    this.displayAgregar = !this.displayAgregar;
+}
+</pre> 
+                <p class="p_sec">
+                    De esta manera cuando se llame a esta funcion se cambiara de true a false
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/61.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Ahora vamos a mostrarlo utilizando el boton "Agregar" de las Opciones del p-breadcrumb que añadimos anteriormente
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/62.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    En <span class="blue">app.component.ts</span> buscamos el objeto donde creamos el menuBar
+                    y agregamos un nuevo nodo
+                </p>
+<pre class="panel-code">
+command: (onclick) => {
+    this.showDialogAgregar();
+}
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/63.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Creo que esta claro como funciona no? Lo explico de igual forma, <span class="pr">command</span> espera un evento que en este caso es onclick y dentro de las llaves se ejecuta el codigo que se desea hacer, en este caso se llama a la funcion showDialogAgregar para cambiar el estado de la variable y por ende el estado visible del dialog
+                </p>
+                <p class="p_sec">
+                    Hacemos clic al boton y vuala!
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/64.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Hay que hacer lo funcionar
+                </p>
                 <!-- <p class="p_sec"> Arreglar algunos errores de importacion con el providers y con el enlace del servicio ServiosAlumnoS
                     Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
                     <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
