@@ -911,13 +911,13 @@ this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
             &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
                 &lt;label for="nombres" class="col-sm-4 col-form-label"&gt;Nombre: &lt;/label&gt;
                 &lt;div class="col-sm-8"&gt;
-                    &lt;input id="nombres" type="text" class="input-dialog" id="nombres"&gt;
+                    &lt;input [(ngModel)]="alumnoSend.nombres" id="nombres" type="text" class="input-dialog" name="nombres"&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
                 &lt;label for="app" class="col-sm-4 col-form-label"&gt;Apellido Paterno:&lt;/label&gt;
                 &lt;div class="col-sm-8"&gt;
-                    &lt;input type="text" class="input-dialog" id="app" placeholder=""&gt;
+                    &lt;input [(ngModel)]="alumnoSend.apellidoPaterno"  type="text" class="input-dialog" id="app" placeholder="" name='apellidoPaterno'&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class="form-group row" style="margin-bottom:20px;"&gt;
@@ -963,7 +963,15 @@ showDialogAgregar(){
                     <img src="../img/primeng/61.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Ahora vamos a mostrarlo utilizando el boton "Agregar" de las Opciones del p-breadcrumb que añadimos anteriormente
+                    Creamos una nueva variable llamada <span class="name-var">alumnoSend:Alumno</span>, esta misma la usaremos 
+                    en nuestro dialogo, para mostrar contenido y guardar datos, de esta manera cuando se ingrese contenido
+                    en el input se guardaran en la variable y podremos usarla para lo que se necesite.
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/61-1.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Ahora vamos a mostrar el dialogo utilizando el boton "Agregar" de las Opciones del p-breadcrumb que añadimos anteriormente
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/62.png" class="img-fluid rounded" alt="..." >
@@ -992,6 +1000,73 @@ command: (onclick) => {
                 <p class="p_sec">
                     Hay que hacer lo funcionar
                 </p>
+                <p class="p_sec">
+                    Entramos <span class="blue">app.component.ts</span> y creamos una nueva funcion:
+                    <br/>
+                    funAgregarAlumno()
+                </p>
+                <p class="p_sec">
+                    Agregamos el codigo de abajo
+                </p>
+<pre class="panel-code">
+funAgregarAlumno(){
+  this.alumnoService.guardarAlumno(this.alumnoSend)
+    .subscribe(data => {
+      this.showDialogAgregar(); // cerramos el dialog
+      this.showMessage('Se ha agregado correctamente el alumno '+(data as Alumno).matricula+' - '
+        +(data as Alumno).nombres+" "+(data as Alumno).apellidoPaterno+" "+(data as Alumno).apellidoMaterno);
+  });
+}
+</pre>
+                <p class="p_sec">
+                    Con esta funcion estamos llamando al servicio guardarAlumno que crearemos mas adelante, y a una funcion 
+                    de PrimeNG que nos sirve para enviar mensajes Toast. Lo veremos mas adelante. Tendra errores al insertar el codigo
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/64-1.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Crearemos el servicio <span class="pr">guardarAlumno</span> en <span class="blue">alumno.service.ts</span>
+                </p>
+                <p class="p_sec">
+                    Lo abrimos y creamos la funcion 
+                </p>
+<pre class="panel-code">
+guardarAlumno(alumno:Alumno){
+    return this.http.post(this.urlGuardarAlumno, alumno, header)
+}
+</pre>
+                <p class="p_sec">
+                    Para que este metodo funcione necesitamos tres cosas, el url del servicio, el objeto Json Alumno para insertar y un 
+                    header que se necesita para enviar el objeto Alumno.
+                    <br/>
+                    URL: <span class="name-var">urlGuardarAlumno  = "/ServiciosAlumno/servicios/alumnoServicio/guardarAlumno";</span>
+                    <br/>
+                    El objeto se lo enviamos desde el component.ts
+                </p>
+                <p class="p_sec">
+                    Header: <br/>
+                    Se necesitara importar una nueva libreria <br/>
+                    <span class="name-var">
+                        import { HttpClient, HttpHeaders } from '@angular/common/http';
+                    </span>
+                </p>
+<pre class="panel-code">
+const header = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json'
+    })
+};
+</pre>
+                <p class="p_sec">
+                    Este codigo se inserta arriba de <span class="pr">@Injectable({providedIn: 'root'})</span>
+                </p>
+                <p class="p_sec">
+                    Resultado:
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/65.png" class="img-fluid rounded" alt="..." >
+                </div>
                 <!-- <p class="p_sec"> Arreglar algunos errores de importacion con el providers y con el enlace del servicio ServiosAlumnoS
                     Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
                     <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
