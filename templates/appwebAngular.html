@@ -575,7 +575,7 @@ this.menuBar = [
                 <pre class="panel-code">
                     <code class="code-build">
 &lt;p-table id="table" #dt [columns]="cols" [value]="alumnos" [paginator]="true" [rows] = "10"
-    selectionMode="single" [(selection)] = "dataSelect" (onRowSelect)="onRowSelect()" (onRowUnselect)="onRowUnselect($event)"&gt;
+    selectionMode="single" [(selection)] = "alumnoSelect" (onRowSelect)="onRowSelect()" (onRowUnselect)="onRowUnselect($event)"&gt;
     &lt;ng-template pTemplate="caption"&gt;
         &lt;div style="text-align: left"&gt;
             &lt;button class="btn btn-dark" (click)="clearFilters(dt)"&gt;
@@ -619,7 +619,7 @@ this.menuBar = [
                 </p>
                 <p class="p_sec">
                     Abrimos <span class="blue">app.component.ts</span> <br>
-                    Creamo una variable arreglo llamada cols de tipo any y la definimos
+                    Creamos una variable arreglo llamada cols de tipo any y la definimos:
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/39.png" class="img-fluid rounded" alt="..." >
@@ -923,7 +923,7 @@ this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
             &lt;div class="form-group row" style="margin-bottom:20px;"&gt;
                 &lt;label for="apm" class="col-sm-4 col-form-label"&gt;Apellido Materno:&lt;/label&gt;
                 &lt;div class="col-sm-8"&gt;
-                    &lt;input type="text" class="input-dialog" id="apm" placeholder=""&gt;
+                    &lt;input [(ngModel)]="alumnoSend.apellidoMaterno" type="text" class="input-dialog" id="apm" placeholder="" name='apellidoMaterno'&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;p style="text-align: center"&gt;
@@ -1067,12 +1067,296 @@ const header = {
                 <div class="text-center">
                     <img src="../img/primeng/65.png" class="img-fluid rounded" alt="..." >
                 </div>
-                <!-- <p class="p_sec"> Arreglar algunos errores de importacion con el providers y con el enlace del servicio ServiosAlumnoS
-                    Agregamos el primer componente de primeNG, debajo de la etiqueta nav <br>
-                    <span class="blue">&lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;</span>
+                <p class="p_sec">
+                    Ya tenemos el lado del servicio corriendo, vamos a agregar el componente Toast de PrimeNG para mostrar mensajes
                 </p>
-                 -->
+                <p class="p_sec">
+                    Primero importamos el componente, abrimos <span class="blue">app.module.ts</span> e importamos la libreria. <br/>
+                    <span class="name-var">
+                        import {ToastModule} from 'primeng/toast';
+                    </span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/66.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Regresamos a <span class="blue">app.component.ts</span> y agregamos una nueva variable al constructor: <br/>
+                    <span class="name-var">
+                        private messageService: MessageService <br/>
+                    </span> <br/>
+                    En <span class="pr">@Component</span> agregamos un nuevo atributo llamado providers y agregamos la variable <span class="name-var">messageService</span> 
+                    si este paso se omite la pagina podria no cargar<br/>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/67.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Agregamos la funcion que muestra los mensaje Toast: <span class="pr">showMessage</span>
+                </p>
+<pre class="panel-code">
+showMessage(details) {
+  this.messageService.add({
+      key: 'msgToast',
+      severity:'success', 
+      summary:'Alumnos', 
+      detail: details}
+  );
+}
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/68.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Esta es una funcion que nos proporciona PrimeNG para saber mas visita su documentacion: <a href="https://www.primefaces.org/primeng/#/toast" target="_blank">https://www.primefaces.org/primeng/#/toast</a>
+                </p>
+                <p class="p_sec">
+                    Por ultimo insertamos el componente en <span class="blue">app.component.html</span> debajo de la etiqueta nav:
+                    <br/>
+                    <span class="name-var">
+                        &lt;p-toast key="msgToast" [modal]="true" [baseZIndex]="5000"&gt;&lt;/p-toast&gt;
+                    </span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/68-1.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Hasta este punto no deberia marcar ningun error
+                </p>
+                <p class="p_sec">
+                    Ahora probamos que todo lo nuevo funcione, agregando un nuevo Alumno
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/69.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/70.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Se agrego correctamente
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/71.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Ahora que ya entendiste como funcionan los servicios y los componentes, solo nos resta terminar con editar y eliminar.
+                </p>
+                <p class="p_sec">
+                    Agregamos las funciones en <span class="blue">alumno.services.ts</span>
+                </p>
+<pre class="panel-code">
+editarAlumno(alumno: Alumno): Observable&lt;Alumno&gt; {
+    return this.http.put&lt;Alumno&gt;(this.urlEditar, alumno, header)
+}
+
+eliminarAlumno(id: number): Observable&lt;{}&gt;{
+    return this.http.delete(this.urlEliminar+id);
+}
+</pre>
+                <p class="p_sec">
+                    URLEDITAR: <span class="name-var">urlEditar = "/ServiciosAlumno/servicios/alumnoServicio/modificarAlumno?";</span> <br/>
+                    URLELIMINAR: <span class="name-var">urlEliminar = "/ServiciosAlumno/servicios/alumnoServicio/eliminarAlumno?matricula=";</span><br/>
+                    <br/>
+                    Importas la nueva class: <span class="name-var">import { Observable } from 'rxjs';</span>
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/72.png" class="img-fluid rounded" alt="..." >
+                </div>
+
+                <p class="p_sec">
+                    <span class="blue">app.component.html</span> <br/>
+                    Formulario EditarAlumno
+                </p>
+<pre class="panel-code">
+&lt;p-dialog id="editarAlumno" header="Editar Alumno" [(visible)]="displayEditar" [modal]="true" [responsive]="true"
+    [style]="{width: '450px', height: '230px', background: '#3f3f3f', top: '0px'}" [minY]="50"&gt;
+    &lt;div style="padding: 5%;"&gt;
+        &lt;form&gt;
+            &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
+                &lt;label for="matricula" class="col-sm-6 col-form-label"&gt;Matricula: &lt;/label&gt;
+                &lt;div class="col-sm-6"&gt;
+                    &lt;input [(ngModel)]="alumnoSend.matricula" id="matricula" type="text" class="input-dialog" name="matricula"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
+                &lt;label for="nombres" class="col-sm-6 col-form-label"&gt;Nombre: &lt;/label&gt;
+                &lt;div class="col-sm-6"&gt;
+                    &lt;input [(ngModel)]="alumnoSend.nombres" id="nombres" type="text" class="input-dialog" name="nombres"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row" style="margin-bottom:10px;"&gt;
+                &lt;label for="app" class="col-sm-6 col-form-label"&gt;Apellido Paterno:&lt;/label&gt;
+                &lt;div class="col-sm-6"&gt;
+                    &lt;input [(ngModel)]="alumnoSend.apellidoPaterno"  type="text" class="input-dialog" id="app" placeholder="" name='apellidoPaterno'&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row" style="margin-bottom:20px;"&gt;
+                &lt;label for="apm" class="col-sm-6 col-form-label"&gt;Apellido Materno:&lt;/label&gt;
+                &lt;div class="col-sm-6"&gt;
+                    &lt;input [(ngModel)]="alumnoSend.apellidoMaterno" type="text" class="input-dialog" id="apm" placeholder="" name='apellidoMaterno'&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p style="text-align: center"&gt;
+                &lt;button id="btnAgregar" class="btn btn-dark" (click)="funEditarAlumno()"&gt;
+                        &lt;span id="spanSpinner" class="spinner-border spinner-border-sm dp-none" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                        &lt;span id="spanText"&gt;Editar&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;button class="btn btn-dark" (click) = "showDialogEditar()"&gt;Cancelar&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/p-dialog&gt;
+</pre> 
+                <p class="p_sec">
+                    Formulario EliminarAlumno
+                </p>
+<pre class="panel-code">
+    &lt;p-dialog id="eliminarAlumno" header="Confirmacion" [(visible)]="displayConfirm" [modal]="true" [responsive]="true"
+        [style]="{width: '450px', height: '200px', background: '#3f3f3f', top: '0px'}" [minY]="50"&gt;
+        &lt;div style="padding: 5% 2%;"&gt;
+            &lt;p&gt;
+                &lt;span class="pi pi-trash"&gt;&lt;/span&gt; ¿Estas seguro que deseas borrar al alumno con la matricula: {{alumnoSend.matricula}} ?
+            &lt;/p&gt;
+            &lt;p style="text-align: right;margin-top: 13px;"&gt;
+                &lt;button class="btn btn-dark" (click) = "funEliminarAlumno()"&gt;Si&lt;/button&gt;
+                &lt;button class="btn btn-dark" (click) = "showDialogDeleteConfirm();clearFilters(dt)"&gt;No&lt;/button&gt;
+            &lt;/p&gt;  
+        &lt;/div&gt;
+    &lt;/p-dialog&gt;
+</pre>
+                <p class="p_sec">
+                    <span class="blue">app.component.ts</span> <br/>
+                    Agregamos las nuevas variables con sus respectivas funciones para los dialogs Editar/Eliminar
+                </p>
+<pre class="panel-code">
+displayEditar: boolean = false;
+displayConfirm: boolean = false;
+
+showDialogEditar(){
+  this.displayEditar = !this.displayEditar;
+}
+
+showDialogDeleteConfirm(){
+  this.displayConfirm = !this.displayConfirm;
+}
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/73.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Agregamos una nueva variable de tipo Alumno: <br/> <br/>
+                    <span class="name-var">alumnoSelect:Alumno;</span> <br/><br/>
+                    Esta varible obtiene el alumno que selecciones al hacer clic en una fila de la tabla
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/74.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Agregamos una nueva variable de tipo Booleana: <br/><br/>
+                    <span class="name-var">
+                         disabledRow: boolean = true;
+                    </span> <br/><br/>
+                    Esta variable se encargara de bloquear y desbloquear los botones "Editar/Eliminar" del menuBar donde anteriormente los bloqueamos manualmente.
+                    
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/34.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Al hacer clic a una celda de la tabla los botones se desbloquean permitiendo editar o eliminar un registro. <br/>
+                    Para eso vamos a agregar dos funciones:
+                </p>
+<pre class="panel-code">
+onRowSelect() {
+    this.disabledRow = false;
+    this.alumnoSend = this.alumnoSelect;
+    this.ngOnInit();
+    //console.log(this.alumnoSelect);
+}
+  
+onRowUnselect(event) {
+    this.disabledRow = true;
+    this.ngOnInit();
+}
+</pre>
+                <p class="p_sec">
+                    Solo queda editar el menuBar
+                </p>
+                <p class="p_sec">
+                    Antes
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/76.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Despues
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/75.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Cambiamos el atributo disabled y agregamos el comando para abrir el dialogo al hacer clic
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/77.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/78.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Agregamos las ultimas dos funciones para llamar a los servicios editar y eliminar <span class="blue">funAgregarAlumno()</span>
+                </p>
+<pre class="panel-code">
+funEditarAlumno(){ 
+    this.alumnoService.editarAlumno(this.alumnoSend).subscribe();
+    this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
+    this.onRowSelect();
+    this.showDialogEditar();
+    this.showMessage('Se ha editado correctamente al alumno '+this.alumnoSend.matricula+' - '
+      +this.alumnoSend.nombres+" "+this.alumnoSend.apellidoPaterno+" "+this.alumnoSend.apellidoMaterno);
+}
+
+funEliminarAlumno(){
+    this.alumnoService.eliminarAlumno(this.alumnoSend.matricula).subscribe();
+    this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
+    this.onRowSelect();
+    this.showDialogDeleteConfirm();
+    this.showMessage('Se ha eliminado correctamente al alumno '+this.alumnoSend.matricula+' - '
+      +this.alumnoSend.nombres+" "+this.alumnoSend.apellidoPaterno+" "+this.alumnoSend.apellidoMaterno);
+}
+</pre>
+                <div class="text-center">
+                    <img src="../img/primeng/79.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Ya tenemos literalmente todo listo, solo falta comprobar que funcionen los dialogs
+                </p>
+                <div class="text-center">
+                    <img src="../img/primeng/80.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/81.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/82.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec"></p>
+                <div class="text-center">
+                    <img src="../img/primeng/83.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/84.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <div class="text-center">
+                    <img src="../img/primeng/85.png" class="img-fluid rounded" alt="..." >
+                </div>
+                <p class="p_sec">
+                    Aqui finaliza este pequeño curso de Angular con PrimeNG, quedan muchas cosas por ver pero todo queda a tu imaginacion.
+                </p>
+                <p class="p_sec" style="text-align: right;">
+                    - Ing. Isai Aleman Calderón.
+                </p>
             </li>
+
         </ol>
         <a href="#" class="scrollup">Scroll</a>
         <a href="#" class="scrollDown">Scroll</a>

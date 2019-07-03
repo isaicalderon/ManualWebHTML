@@ -433,6 +433,7 @@
             </li>
         </ol>
         <a href="#" class="scrollup">Scroll</a>
+        <a href="#" class="scrollDown">Scroll</a>
         <a href="../index.html" class="backPage"><img style="width: inherit;height: inherit;" src="../img/icon_back.png"></a>
         
     </main>
@@ -454,7 +455,11 @@
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
             });
-            
+
+            $('.scrollDown').click(function(){
+                $("html, body").animate({ scrollTop: $(document).height() }, 600);
+                return false;
+            });            
         });
     </script>
 
