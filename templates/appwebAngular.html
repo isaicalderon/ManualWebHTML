@@ -68,7 +68,7 @@
                 <p>Instalacion de Visual Studio Code</p>
                 <p class="p_sec">
                     Este programa será el IDE con que vamos a trabajar. <br/>
-                    Entras a la pagina y lo descargas: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> theme: Monaki (Opcional)
+                    Entras a la página y lo descargas: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> theme: Monaki (Opcional)
                 </p>
                 <p class="p_sec">
                     Vamos a requerir también de Eclipse JEE con Wildfly instalado asi como viene en el primer tutorial: 
@@ -85,7 +85,7 @@
                 <p>Instalacion de NodeJs</p>
                 <p class="p_sec">
                     Vamos a requerir de NodeJs para trabajar con PrimeNG for Angular <br/>
-                    Entras a la pagina y lo descargas: <a href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a>
+                    Entras a la página y lo descargas: <a href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a>
                 </p>
                 <p class="p_sec">
                     Una vez descargado e instalado NodeJs lo siguiente es probar que funciona abriendo la terminal o el CMD y ejecutar este comando: 
@@ -95,7 +95,7 @@
                     <i class="fab fa-linux"></i> Linux: <kbd>Ctrl + Alt + T</kbd> <br/>
                 </p>
                 <p class="p_sec">
-                    En mi caso estoy usando la terminal de github, la terminal deberá responder con la versión instalada de NodeJs
+                    En mi caso estoy usando la terminal de Githubscrips, la terminal deberá responder con la versión instalada de NodeJs
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/2.png" class="img-fluid rounded" alt="...">
@@ -166,7 +166,7 @@
                     <img src="../img/primeng/10.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    Hacemos lo mismo con el nodo <span class="blue">scrips</span>
+                    Hacemos lo mismo con el nodo <span class="blue">scripts</span>
                 </p>
                 <pre class="panel-code">
                     <code class="code-build">
@@ -219,7 +219,7 @@
                     Ya tenemos lista nuestra primera parte de este proyecto
                 </p>
                 <p class="p_sec">
-                    Empezemos a programar abriendo <span class="blue">src</span>/<span class="blue">app</span>/<span class="name-var">app.component.html</span> <br>
+                    Empecemos a programar abriendo <span class="blue">src</span>/<span class="blue">app</span>/<span class="name-var">app.component.html</span> <br>
                     Este HTML es nuestra primera ruta que enlaza nuestro proyecto del <span class="blue">src</span>/<span class="name-var">index.html</span> con la etiqueta 
                     <span class="pr"> &lt;app-root&gt;&lt;/app-root&gt; </span> y lo declaramos en 
                     <span class="blue">src</span>/<span class="name-var">app.component.ts</span>.
@@ -417,7 +417,7 @@ body .ui-dialog .ui-dialog-titlebar{
                     <img src="../img/primeng/25.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    Si actualizamos la pagina no mostrará nada, esto pasa porque existe un error, tenemos que importarlo en <span class="name-var">app.modules.ts</span> y luego lo definimos en <span class="name-var">app.component.ts</span>
+                    Si actualizamos la página no mostrará nada, esto pasa porque existe un error, tenemos que importarlo en <span class="name-var">app.modules.ts</span> y luego lo definimos en <span class="name-var">app.component.ts</span>
                 </p>
                 <p class="p_sec">
                     Abrimos <span class="name-var">app.modules.ts</span>, importamos esta librería <br> <br>
@@ -432,7 +432,7 @@ body .ui-dialog .ui-dialog-titlebar{
                 <p class="p_sec">
                     Abrimos <span class="name-var">app.component.ts</span> y creamos una variable llamada igual que nuestro componente: menuNav y la declaramos como arreglo de MenuItem. <br>
                     <span class="blue">menuNav:MenuItem[]</span> <br> <br>
-                    Importamos la libreria: 
+                    Importamos la librería: 
                     <span class="blue">import { MenuItem } from 'primeng/api';</span>
                 </p>
                 <div class="text-center">
@@ -440,7 +440,7 @@ body .ui-dialog .ui-dialog-titlebar{
                 </div>
                 <p class="p_sec">
                     Creamos un método llamado <span class="blue">ngOnInit()</span> vamos a programar dentro de él. Se requiere que se implemente la interface OnInit <br>
-                    Este metodo se ejecuta cuando la página se halla cargado por completo. <br> <br>
+                    Este método se ejecuta cuando la página se halla cargado por completo. <br> <br>
                     Declaramos sus valores en formato json puede copiar el código de abajo.
                 </p>
                 <pre class="panel-code"><code class="code-build">
@@ -471,13 +471,13 @@ export class AppComponent implements OnInit{
                     <img src="../img/primeng/29.png" class="img-fluid rounded" alt="...">
                 </div>
                 <p class="p_sec">
-                    Continuamos agregando otro compomente de PrimeNG <br> <br>
+                    Continuamos agregando otro componente de PrimeNG <br> <br>
                     <span class="blue">
                         &lt;p class='mb-10'&gt;&lt;/p&gt; &lt;!-- dejamos espacio con margin-bottom --&gt;
                         <br>
                         &lt;p-menubar [model]="menuBar"&gt;&lt;/p-menubar&gt; &lt;!-- etiqueta PrimeNG --&gt;
                     </span> <br> <br>
-                        Este elemento es muy similar al menuNav que recien creamos, y en este caso el elemento toma por nombre <span class="blue">menuBar</span> en <span class="pr">[model]</span>
+                        Este elemento es muy similar al menuNav que recién creamos, y en este caso el elemento toma por nombre <span class="blue">menuBar</span> en <span class="pr">[model]</span>
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/30.png" class="img-fluid rounded" alt="...">
@@ -550,7 +550,7 @@ this.menuBar = [
                     Desactivamos Editar y Eliminar hasta que haya algún alumno disponible para editar o eliminar. Con esto terminas con el menuBar.
                 </p>
                 <p class="p_sec">
-                    Lo siguente ahora es agregar una tabla para mostrar a los Alumnos registrados
+                    Lo siguiente ahora es agregar una tabla para mostrar a los Alumnos registrados
                 </p>
                 <p class="p_sec">
                     Agregamos un margin-bottom para separar los componentes
@@ -559,7 +559,7 @@ this.menuBar = [
                     <img src="../img/primeng/36.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Abrimos <span class="blue">app.module.ts</span> y agregamos el siguente codigo:
+                    Abrimos <span class="blue">app.module.ts</span> y agregamos el siguiente código:
                     <br><br>
                     <span class="blue">import {TableModule} from 'primeng/table';</span>
                 </p>
@@ -567,10 +567,10 @@ this.menuBar = [
                     <img src="../img/primeng/37.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Recuerda que tambien debes agregar el componente en la seccion de "imports" como se muestra en la imagen
+                    Recuerda que también debes agregar el componente en la sección de "imports" como se muestra en la imagen
                 </p>
                 <p class="p_sec">
-                    Agregamos la tabla con el codigo de abajo
+                    Agregamos la tabla con el código de abajo
                 </p>
                 <pre class="panel-code">
                     <code class="code-build">
@@ -625,7 +625,7 @@ this.menuBar = [
                     <img src="../img/primeng/39.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Definimos a <span class="blue">cols</span> agregando este objeto dentro de la funcion ngOnInit
+                    Definimos a <span class="blue">cols</span> agregando este objeto dentro de la función ngOnInit
                 </p>
                 <pre class="panel-code">
 this.cols = [
@@ -646,7 +646,7 @@ this.cols = [
                 </div>
 
                 <p class="p_sec">
-                    Los campos se agregan gracias a Angular con el codigo <span class="blue">*ngFor = "let col of columns"</span>, con este codigo se hace un foreach iterando el objeto cols <br>
+                    Los campos se agregan gracias a Angular con el código <span class="blue">*ngFor = "let col of columns"</span>, con este código se hace un foreach iterando el objeto cols <br>
                     &lt;th *ngFor="let col of columns" [pSortableColumn]="col.field">&lt;/th> <br>
                     <span class="tab"></span>{{col.header}} <-- esto es Angular
                 </p>
@@ -656,7 +656,7 @@ this.cols = [
                     Mientras Eclipse abre hagamos un paso muy importante para evitar un error llamado <a href="https://developer.mozilla.org/es/docs/Web/HTTP/CORS/Errors/CORSMissingAllowOrigin" target="_blank">CORS header</a> sin este paso los datos podrían no mostrarse
                 </p>
                 <p class="p_sec">
-                    Creamos un nuevo archivo en la carpeta raiz del proyecto llamado <span class="blue">proxy.conf.json</span>
+                    Creamos un nuevo archivo en la carpeta raíz del proyecto llamado <span class="blue">proxy.conf.json</span>
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/42.png" class="img-fluid rounded" alt="..." >
@@ -678,12 +678,12 @@ this.cols = [
                 </div>
                 <p class="p_sec">
                     <span class="pr">"/ServiciosAlumno/servicios/*"</span> en este nodo tienes que poner el path de tus servicios web, en este caso los
-                    servicios estan despues de /servicios/ y se agrega un asterisco para hacer referencia a todos los servicios <br>
-                    <span class="pr">"target"</span> es la direccion del servidor <br>
+                    servicios están después de /servicios/ y se agrega un asterisco para hacer referencia a todos los servicios <br>
+                    <span class="pr">"target"</span> es la dirección del servidor <br>
                     <span class="pr">"secure"</span> false
                 </p>
                 <p class="p_sec">
-                    El ultimo paso es abrir el archivo <span class="blue">package.json</span> <br>
+                    El último paso es abrir el archivo <span class="blue">package.json</span> <br>
                     Buscamos el nodo "start" y lo remplazamos por este código: <span class="name-var">"start": "ng serve --proxy-config proxy.conf.json",</span>
                 </p>
                 <div class="text-center">
@@ -709,7 +709,7 @@ this.cols = [
                     Hora de configurar los servicios para hacerlos mostrar
                 </p>
                 <p class="p_sec">
-                    En la carpeta <span class="blue">app</span> creamos una nueva carpeta llamada entity, esta carpeta contendra las entidades a utilizar
+                    En la carpeta <span class="blue">app</span> creamos una nueva carpeta llamada entity, esta carpeta contendrá las entidades a utilizar
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/47.png" class="img-fluid rounded" alt="..." >
@@ -736,7 +736,7 @@ export interface Alumno{
     </code>
 </pre>
                 <p class="p_sec">
-                    Las variables estan creadas pero no definimos su tipo de dato, excepto la variable matricula la definimos como tipo number y agregamos "?" <br/>
+                    Las variables están creadas pero no definimos su tipo de dato, excepto la variable matricula la definimos como tipo number y agregamos "?" <br/>
                     significa que el valor puede o no puede estar
                 </p>
                 <p class="p_sec">
@@ -785,7 +785,7 @@ export class AlumnoService{
                     </span>
                 </p>
                 <p class="p_sec">
-                    Agregaremos esta funcion para ordenar datos
+                    Agregaremos esta función para ordenar datos
                 </p>
 <pre class="panel-code">
 sortJSON(data, key, orden) {
@@ -810,7 +810,7 @@ sortJSON(data, key, orden) {
                     <img src="../img/primeng/52.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Creamos nuestra funcion donde obtendremos todos los datos de la tabla por medio del servcio GET
+                    Creamos nuestra función donde obtendremos todos los datos de la tabla por medio del servicio GET
                 </p>
 <pre class="panel-code">
 getAllAlumnos(){
@@ -821,7 +821,7 @@ getAllAlumnos(){
 }
 </pre>
                 <p class="p_sec">
-                    En esta funcion utilizamos la variable <span class="blue">http</span> para llamar a la funcion <span class="pr">get</span> y le enviamos como parametro 
+                    En esta función utilizamos la variable <span class="blue">http</span> para llamar a la función <span class="pr">get</span> y le enviamos como parámetro 
                     el url de nuestro servicio 
                 </p>
                 <div class="text-center">
@@ -842,7 +842,7 @@ getAllAlumnos(){
                     <span class="name-var">
                         import { AlumnoService } from './services/alumno.services';
                     </span> <br/> <br/>
-                    Tambien importamos la clase <span class="blue">HttpClientModule</span> <br/>
+                    También importamos la clase <span class="blue">HttpClientModule</span> <br/>
                     <span class="name-var">
                         import { HttpClientModule } from '@angular/common/http'; 
                     </span>
@@ -861,19 +861,19 @@ constructor(private alumnoService: AlumnoService) {}
                     <img src="../img/primeng/56.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Crearemos una nueva variable de tipo Arreglo <span class="com">Alumno</span>, aqui se guardaran los resultados de la consulta y los mostrara la tabla <br/>
+                    Crearemos una nueva variable de tipo Arreglo <span class="com">Alumno</span>, aquí se guardaran los resultados de la consulta y los mostrara la tabla <br/>
                     <span class="name-var">
                         alumnos: Alumno[];
                     </span>
                 </p>
                 <p class="p_sec">
-                    En la funcion <span class="com">ngOnInit()</span> usamos la variable <span class="name-var">alumnoService</span> para llamar a la funcion <span class="blue">getAllAlumno()</span>
+                    En la función <span class="com">ngOnInit()</span> usamos la variable <span class="name-var">alumnoService</span> para llamar a la función <span class="blue">getAllAlumno()</span>
                 </p>
 <pre class="panel-code">
 this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
 </pre>
                 <p class="p_sec">
-                    usamos <span class="pr">.then</span> y enviamos la variable alumnos para guardar los datos
+                    Usamos <span class="pr">.then</span> y enviamos la variable alumnos para guardar los datos
                 </p>
 
                 <div class="text-center">
@@ -889,10 +889,10 @@ this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
                     Con esto ya tenemos la tabla lista y visualizando los datos
                 </p>
                 <p class="p_sec">
-                    Lo siguente es crear el Dialog para agregar un nuevo Alumno
+                    Lo siguiente es crear el Dialog para agregar un nuevo Alumno
                 </p>
                 <p class="p_sec">
-                    Abrimos <span class="blue">app.module.ts</span>, importamos una nueva libreria <br>
+                    Abrimos <span class="blue">app.module.ts</span>, importamos una nueva librería <br>
                     <span class="name-var">
                         import {DialogModule} from 'primeng/dialog';
                     </span>
@@ -941,15 +941,15 @@ this.alumnoService.getAllAlumnos().then(alumnos => this.alumnos = alumnos);
                     <img src="../img/primeng/60.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    <span class="pr">[(visible)]="displayAgregar"</span> atributo para indicar si el componente es visible o invisible, en este caso se mostrara dependiendo al estado de la variable booleana displayAgregar, mas adelante la programamos <br>
+                    <span class="pr">[(visible)]="displayAgregar"</span> atributo para indicar si el componente es visible o invisible, en este caso se mostrara dependiendo al estado de la variable booleana displayAgregar, más adelante la prograremos <br>
                     <span class="pr">header</span> indica el nombre del dialog <br>
                 </p>
                 <p class="p_sec">
                     Ahora hay que crear la variable <span class="name-var">displayAgregar</span> 
-                    en <span class="blue">app.component.ts</span> para que el dialog aparesca y desaparesca
+                    en <span class="blue">app.component.ts</span> para que el dialog aparezca y desaparezca
                 </p>
                 <p class="p_sec">
-                    Creamos una funcion para cambiar el valor de la variable
+                    Creamos una función para cambiar el valor de la variable
                 </p>
 <pre class="panel-code">
 showDialogAgregar(){
@@ -957,7 +957,7 @@ showDialogAgregar(){
 }
 </pre> 
                 <p class="p_sec">
-                    De esta manera cuando se llame a esta funcion se cambiara de true a false
+                    De esta manera cuando se llame a esta función se cambiara de true a false
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/61.png" class="img-fluid rounded" alt="..." >
@@ -971,7 +971,7 @@ showDialogAgregar(){
                     <img src="../img/primeng/61-1.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Ahora vamos a mostrar el dialogo utilizando el boton "Agregar" de las Opciones del p-breadcrumb que añadimos anteriormente
+                    Ahora vamos a mostrar el dialogo utilizando el botón "Agregar" de las Opciones del p-breadcrumb que añadimos anteriormente
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/62.png" class="img-fluid rounded" alt="..." >
@@ -989,10 +989,10 @@ command: (onclick) => {
                     <img src="../img/primeng/63.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Creo que esta claro como funciona no? Lo explico de igual forma, <span class="pr">command</span> espera un evento que en este caso es onclick y dentro de las llaves se ejecuta el codigo que se desea hacer, en este caso se llama a la funcion showDialogAgregar para cambiar el estado de la variable y por ende el estado visible del dialog
+                    Creo que esta claro como funciona no? Lo explico de igual forma, <span class="pr">command</span> espera un evento que en este caso es onclick y dentro de las llaves se ejecuta el código que se desea hacer, en este caso se llama a la función showDialogAgregar para cambiar el estado de la variable y por ende el estado visible del dialog
                 </p>
                 <p class="p_sec">
-                    Hacemos clic al boton y vuala!
+                    Hacemos clic al botón y vuala!
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/64.png" class="img-fluid rounded" alt="..." >
@@ -1001,12 +1001,12 @@ command: (onclick) => {
                     Hay que hacer lo funcionar
                 </p>
                 <p class="p_sec">
-                    Entramos <span class="blue">app.component.ts</span> y creamos una nueva funcion:
+                    Entramos <span class="blue">app.component.ts</span> y creamos una nueva función:
                     <br/>
                     funAgregarAlumno()
                 </p>
                 <p class="p_sec">
-                    Agregamos el codigo de abajo
+                    Agregamos el código de abajo
                 </p>
 <pre class="panel-code">
 funAgregarAlumno(){
@@ -1019,8 +1019,8 @@ funAgregarAlumno(){
 }
 </pre>
                 <p class="p_sec">
-                    Con esta funcion estamos llamando al servicio guardarAlumno que crearemos mas adelante, y a una funcion 
-                    de PrimeNG que nos sirve para enviar mensajes Toast. Lo veremos mas adelante. Tendra errores al insertar el codigo
+                    Con esta función estamos llamando al servicio guardarAlumno que crearemos más adelante, y a una función 
+                    de PrimeNG que nos sirve para enviar mensajes Toast. Lo veremos más adelante. Tendra errores al insertar el código
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/64-1.png" class="img-fluid rounded" alt="..." >
@@ -1029,7 +1029,7 @@ funAgregarAlumno(){
                     Crearemos el servicio <span class="pr">guardarAlumno</span> en <span class="blue">alumno.service.ts</span>
                 </p>
                 <p class="p_sec">
-                    Lo abrimos y creamos la funcion 
+                    Lo abrimos y creamos la función 
                 </p>
 <pre class="panel-code">
 guardarAlumno(alumno:Alumno){
@@ -1037,7 +1037,7 @@ guardarAlumno(alumno:Alumno){
 }
 </pre>
                 <p class="p_sec">
-                    Para que este metodo funcione necesitamos tres cosas, el url del servicio, el objeto Json Alumno para insertar y un 
+                    Para que este método funcione necesitamos tres cosas, el url del servicio, el objeto Json Alumno para insertar y un 
                     header que se necesita para enviar el objeto Alumno.
                     <br/>
                     URL: <span class="name-var">urlGuardarAlumno  = "/ServiciosAlumno/servicios/alumnoServicio/guardarAlumno";</span>
@@ -1046,7 +1046,7 @@ guardarAlumno(alumno:Alumno){
                 </p>
                 <p class="p_sec">
                     Header: <br/>
-                    Se necesitara importar una nueva libreria <br/>
+                    Se necesitara importar una nueva librería <br/>
                     <span class="name-var">
                         import { HttpClient, HttpHeaders } from '@angular/common/http';
                     </span>
@@ -1059,7 +1059,7 @@ const header = {
 };
 </pre>
                 <p class="p_sec">
-                    Este codigo se inserta arriba de <span class="pr">@Injectable({providedIn: 'root'})</span>
+                    Este código se inserta arriba de <span class="pr">@Injectable({providedIn: 'root'})</span>
                 </p>
                 <p class="p_sec">
                     Resultado:
@@ -1071,7 +1071,7 @@ const header = {
                     Ya tenemos el lado del servicio corriendo, vamos a agregar el componente Toast de PrimeNG para mostrar mensajes
                 </p>
                 <p class="p_sec">
-                    Primero importamos el componente, abrimos <span class="blue">app.module.ts</span> e importamos la libreria. <br/>
+                    Primero importamos el componente, abrimos <span class="blue">app.module.ts</span> e importamos la librería. <br/>
                     <span class="name-var">
                         import {ToastModule} from 'primeng/toast';
                     </span>
@@ -1085,13 +1085,13 @@ const header = {
                         private messageService: MessageService <br/>
                     </span> <br/>
                     En <span class="pr">@Component</span> agregamos un nuevo atributo llamado providers y agregamos la variable <span class="name-var">messageService</span> 
-                    si este paso se omite la pagina podria no cargar<br/>
+                    si este paso se omite la página podría no cargar<br/>
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/67.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Agregamos la funcion que muestra los mensaje Toast: <span class="pr">showMessage</span>
+                    Agregamos la función que muestra los mensajes Toast: <span class="pr">showMessage</span>
                 </p>
 <pre class="panel-code">
 showMessage(details) {
@@ -1107,7 +1107,7 @@ showMessage(details) {
                     <img src="../img/primeng/68.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Esta es una funcion que nos proporciona PrimeNG para saber mas visita su documentacion: <a href="https://www.primefaces.org/primeng/#/toast" target="_blank">https://www.primefaces.org/primeng/#/toast</a>
+                    Esta es una función que nos proporciona PrimeNG para saber más visita su documentación: <a href="https://www.primefaces.org/primeng/#/toast" target="_blank">https://www.primefaces.org/primeng/#/toast</a>
                 </p>
                 <p class="p_sec">
                     Por ultimo insertamos el componente en <span class="blue">app.component.html</span> debajo de la etiqueta nav:
@@ -1120,7 +1120,7 @@ showMessage(details) {
                     <img src="../img/primeng/68-1.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Hasta este punto no deberia marcar ningun error
+                    Hasta este punto no debería marcar ningún error
                 </p>
                 <p class="p_sec">
                     Ahora probamos que todo lo nuevo funcione, agregando un nuevo Alumno
@@ -1245,7 +1245,7 @@ showDialogDeleteConfirm(){
                 <p class="p_sec">
                     Agregamos una nueva variable de tipo Alumno: <br/> <br/>
                     <span class="name-var">alumnoSelect:Alumno;</span> <br/><br/>
-                    Esta varible obtiene el alumno que selecciones al hacer clic en una fila de la tabla
+                    Esta variable obtiene el alumno que selecciones al hacer clic en una fila de la tabla
                 </p>
                 <div class="text-center">
                     <img src="../img/primeng/74.png" class="img-fluid rounded" alt="..." >
@@ -1350,7 +1350,7 @@ funEliminarAlumno(){
                     <img src="../img/primeng/85.png" class="img-fluid rounded" alt="..." >
                 </div>
                 <p class="p_sec">
-                    Aqui finaliza este pequeño curso de Angular con PrimeNG, quedan muchas cosas por ver pero todo queda a tu imaginacion.
+                    Aquí finaliza este pequeño curso de Angular con PrimeNG, quedan muchas cosas por ver pero todo queda a tu imaginación.
                 </p>
                 <p class="p_sec" style="text-align: right;">
                     - Ing. Isai Aleman Calderón.
